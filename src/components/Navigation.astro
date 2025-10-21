@@ -1,0 +1,105 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/contact', label: 'Contact' },
+];
+
+function isActive(href: string, path: string) {
+  if (href === '/') {
+    return path === '/';
+  }
+  return path.startsWith(href);
+}
+---
+
+<header class="border-b border-navy/10 dark:border-slate-700">
+  <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <!-- Logo/Brand -->
+      <div class="flex items-center">
+        <a
+          href="/"
+          class="text-xl font-bold text-navy dark:text-slate-100 hover:text-gold transition-colors"
+        >
+          Christopher J. Bradley
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-6">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class={`text-sm font-medium transition-colors ${
+              isActive(link.href, currentPath)
+                ? 'text-navy dark:text-slate-100'
+                : 'text-navy/70 dark:text-slate-300 hover:text-navy dark:hover:text-slate-100'
+            }`}
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button
+          id="mobile-menu-button"
+          type="button"
+          class="inline-flex items-center justify-center rounded-md p-2 text-navy dark:text-slate-100 hover:bg-navy/5 dark:hover:bg-slate-800"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <!-- Menu Icon -->
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden pb-4">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class={`block px-3 py-2 rounded-md text-base font-medium ${
+            isActive(link.href, currentPath)
+              ? 'bg-navy/5 dark:bg-slate-800 text-navy dark:text-slate-100'
+              : 'text-navy/70 dark:text-slate-300 hover:bg-navy/5 dark:hover:bg-slate-800 hover:text-navy dark:hover:text-slate-100'
+          }`}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const button = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  button?.addEventListener('click', () => {
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', (!isExpanded).toString());
+    menu?.classList.toggle('hidden');
+  });
+</script>

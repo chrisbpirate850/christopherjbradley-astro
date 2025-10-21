@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Christopher J. Bradley | Gulf War Veteran, Love Advocate, Civic Educator">
+  <Navigation />
+
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-amber-50/30 to-white dark:from-slate-900 dark:to-slate-950">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold tracking-tight text-navy dark:text-slate-100 sm:text-5xl md:text-6xl">
+            Christopher J. Bradley
+          </h1>
+          <p class="mt-4 text-xl text-navy/80 dark:text-slate-300 max-w-3xl mx-auto">
+            Gulf War Veteran, Love Advocate, Family Court Reform Activist
+          </p>
+          <p class="mt-6 text-lg text-navy/70 dark:text-slate-400 max-w-2xl mx-auto">
+            Teaching liberty principles to families. Spreading the message: Love everyone, start with you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Message Section -->
+    <section class="py-16 bg-white dark:bg-slate-950">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-navy dark:text-slate-100 mb-6">
+            The Greatest Lesson
+          </h2>
+          <div class="prose prose-lg max-w-none dark:prose-invert">
+            <p class="text-navy/80 dark:text-slate-300 leading-relaxed">
+              For most of the last decade, I lived on a sailboat along the northwest gulf coast of Florida.
+              I photographed over 2,000 sunsets in the same sacred space and learned the greatest lesson:
+              Life is simple, love everyone and start with you.
+            </p>
+            <blockquote class="border-l-4 border-gold pl-4 italic text-xl my-8">
+              What if you are the person we are all waiting on?
+            </blockquote>
+            <p class="text-navy/80 dark:text-slate-300 leading-relaxed">
+              We could all live in peace on this earth if each of us simply made peace with every person we know.
+              If we each decided to love everyone, it would be game over - love wins.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-12 bg-navy/5 dark:bg-slate-900/50">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+        <h3 class="text-2xl font-bold text-navy dark:text-slate-100 mb-4">
+          Ready to Learn More?
+        </h3>
+        <div class="flex gap-4 justify-center flex-wrap">
+          <a
+            href="/about"
+            class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-navy hover:bg-navy/90 transition-colors"
+          >
+            About Christopher
+          </a>
+          <a
+            href="/projects"
+            class="inline-flex items-center px-6 py-3 border border-navy text-base font-medium rounded-md text-navy dark:text-slate-100 dark:border-slate-300 bg-white dark:bg-slate-800 hover:bg-navy/5 dark:hover:bg-slate-700 transition-colors"
+          >
+            View Projects
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

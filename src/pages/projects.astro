@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const projects = [
+  {
+    title: 'There Is Still Time',
+    url: 'https://thereisstilltime.com',
+    description: 'A visual focus timer app designed for serious exam prep students. Symbolic hourglasses help students stay focused and track their study sessions.',
+  },
+  {
+    title: 'Love Everyone',
+    url: 'https://loveeveryone.love',
+    description: 'Platform dedicated to spreading the message that world peace is possible if each person chooses to love everyone.',
+  },
+  {
+    title: 'Sunsets for the Soul',
+    url: 'https://sunsetsforthesoul.com',
+    description: 'A collection of over 2,000 sunset photographs taken from the same sacred space on a sailboat in the Gulf of Mexico.',
+  },
+  {
+    title: 'The Citizens Compass',
+    url: 'https://thecitizenscompass.com',
+    description: 'Educational resources for understanding constitutional principles and civic engagement.',
+  },
+  {
+    title: 'Family Unity Hub',
+    url: 'https://familyunityhub.com',
+    description: 'Resources and support for families facing parental alienation and family court challenges.',
+  },
+];
+---
+
+<Layout
+  title="Projects | Christopher J. Bradley"
+  description="Explore Christopher J. Bradley's platforms dedicated to time consciousness, love, family unity, and constitutional principles."
+>
+  <Navigation />
+
+  <main class="min-h-screen bg-white dark:bg-slate-950">
+    <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+      <h1 class="text-4xl font-bold text-navy dark:text-slate-100 mb-4">
+        Projects & Platforms
+      </h1>
+      <p class="text-xl text-navy/70 dark:text-slate-300 mb-12">
+        Dedicated to time consciousness, love, family unity, and constitutional principles
+      </p>
+
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project) => (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block p-6 bg-white dark:bg-slate-800 rounded-lg border-2 border-navy/10 dark:border-slate-700 hover:border-gold dark:hover:border-gold transition-all hover:shadow-lg group"
+          >
+            <h2 class="text-xl font-bold text-navy dark:text-slate-100 mb-3 group-hover:text-gold transition-colors">
+              {project.title}
+            </h2>
+            <p class="text-navy/70 dark:text-slate-300 mb-4">
+              {project.description}
+            </p>
+            <span class="inline-flex items-center text-sm font-medium text-gold group-hover:underline">
+              Visit Site
+              <svg class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
