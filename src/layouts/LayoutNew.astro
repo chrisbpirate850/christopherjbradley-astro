@@ -1,0 +1,114 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  canonical?: string;
+  keywords?: string[];
+  type?: "website" | "article";
+  schemaExtra?: any;
+}
+
+const {
+  title,
+  description = "Personal site of Christopher J. Bradley — Gulf War veteran, lawyer, love advocate, civic educator. Teaching liberty principles to families. Love everyone, start with you.",
+  ogImage = "https://christopherjbradley.com/images/christopher-bradley.jpg",
+  canonical = "https://christopherjbradley.com" + Astro.url.pathname,
+  keywords = [
+    "Christopher J Bradley", "civic education", "liberty principles",
+    "family court reform", "parental rights", "American founding principles",
+    "Love Everyone", "The Citizen's Compass"
+  ],
+  type = "website",
+  schemaExtra = null
+} = Astro.props;
+
+const person = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Christopher J. Bradley",
+  "alternateName": "Chris Bradley",
+  "url": "https://christopherjbradley.com",
+  "image": "https://christopherjbradley.com/images/christopher-bradley.jpg",
+  "jobTitle": "Gulf War Veteran, Lawyer, Love Advocate, Civic Educator, Family Court Reform Activist",
+  "description": "Teaching liberty principles to families across America. Love everyone, start with you.",
+  "sameAs": [
+    "https://thecitizenscompass.netlify.app",
+    "https://libertysprinciplesmedia.com",
+    "https://libertysprinciplespals.com",
+    "https://loveeveryone.love",
+    "https://thereisstilltime.com",
+    "https://sunsetsforthesoul.com",
+    "https://familyunityhub.com",
+    "https://fairbillanalyzer.com",
+    "https://theartofcitizenship.com"
+  ],
+  "knowsAbout": [
+    "American Founding Principles", "Constitutional Education", "Civic Education",
+    "Family Court Reform", "Parental Rights", "Educational Technology",
+    "AI for Education", "Character Education", "American History",
+    "Government Transparency", "Legislative Analysis",
+    "Mindfulness", "Intentional Living", "Family Unity"
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Civic Educator and Educational Platform Creator",
+    "description": "Develops educational platforms to teach American founding principles to families."
+  },
+  "alumniOf": { "@type": "Organization", "name": "United States Army" }
+};
+
+const website = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://christopherjbradley.com",
+  "name": "Christopher J. Bradley"
+};
+
+const pageSchema = schemaExtra ? [person, website, schemaExtra] : [person, website];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords.join(", ")} />
+    <meta name="author" content="Christopher J. Bradley" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Christopher J. Bradley" />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script is:inline>
+      const getThemePreference = () => {
+        try {
+          const saved = localStorage.getItem('theme');
+          return saved ? saved : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        } catch { return 'light'; }
+      };
+      document.documentElement.classList[getThemePreference()==='dark' ? 'add' : 'remove']('dark');
+      new MutationObserver(() => {
+        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      }).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    </script>
+  </head>
+  <body class="min-h-screen bg-white dark:bg-slate-950 text-liberty-navy dark:text-slate-100">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-liberty-gold focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold focus:shadow-lg">
+      Skip to main content
+    </a>
+    <slot />
+  </body>
+</html>

@@ -20,6 +20,11 @@ export default {
         'gradient-gold': 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
         'gradient-subtle': 'linear-gradient(to bottom, #fef3c7 0%, #ffffff 100%)',
       },
+      ringColor: {
+        'liberty-gold': '#f59e0b',
+        'liberty-navy': '#1e3a8a',
+        'liberty-burgundy': '#991b1b',
+      },
     },
   },
   plugins: [],

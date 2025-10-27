@@ -1,96 +1,89 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/LayoutNew.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 
 const projects = [
-  {
-    title: 'There Is Still Time',
-    url: 'https://app.thereisstilltime.com',
-    description: 'A visual focus timer app with AI-generated hourglass animations. Built on the Pomodoro Technique for students, professionals, and deep work practitioners seeking distraction-free productivity.',
-  },
-  {
-    title: 'Liberty\'s Principles Pals',
-    url: 'https://libertysprinciplespals.com',
-    description: 'Children\'s book series teaching American founding principles through garden adventures. Six books (28 planned) featuring Ande, Sam, and Nanny Dolores make civics education fun and engaging for ages 5-10.',
-  },
-  {
-    title: 'The Art of Citizenship',
-    url: 'https://vercellibertybooks.web.app',
-    description: 'Comprehensive civic education platform exploring constitutional principles, founding documents, and the responsibilities of engaged citizenship in modern America.',
-  },
-  {
-    title: 'The Citizen\'s AI Compass',
-    url: 'https://the-citizens-ai-compass.web.app/',
-    description: 'Constitutional education resources designed for families. An AI-powered platform helping households understand and discuss American founding principles together.',
-  },
-  {
-    title: 'Find My Work (Claude)',
-    url: 'https://findmyworkclaude.netlify.app',
-    description: 'Project management dashboard tracking website deployment status and AI discoverability. Monitors multiple civic education and peace advocacy sites for search engine optimization and crawlability.',
-  },
-  {
-    title: 'Love Everyone',
-    url: 'https://loveeveryone.love',
-    description: 'Platform dedicated to spreading the message that world peace is possible if each person chooses to love everyone.',
-  },
-  {
-    title: 'Sunsets for the Soul',
-    url: 'https://sunsetsforthesoul.com',
-    description: 'A collection of over 2,000 sunset photographs taken from the same sacred space on a sailboat in the Gulf of Mexico.',
-  },
-  {
-    title: 'The Citizens Compass',
-    url: 'https://thecitizenscompass.com',
-    description: 'Educational resources for understanding constitutional principles and civic engagement.',
-  },
-  {
-    title: 'Family Unity Hub',
-    url: 'https://familyunityhub.com',
-    description: 'Resources and support for families facing parental alienation and family court challenges.',
-  },
+  { name: "The Citizen's Compass", url: "https://thecitizenscompass.netlify.app", desc: "Educational platform teaching American founding principles to families and children through interactive learning paths." },
+  { name: "Liberty's Principles Media", url: "https://libertysprinciplesmedia.com", desc: "Media and educational content focused on teaching constitutional principles and American values." },
+  { name: "Liberty's Principles Pals", url: "https://libertysprinciplespals.com", desc: "Children's educational series (28 books) for learning about American values and founding principles." },
+  { name: "Love Everyone", url: "https://loveeveryone.love", desc: "Platform spreading the transformative message: Love everyone, start with you." },
+  { name: "There Is Still Time", url: "https://thereisstilltime.com", desc: "Mindfulness and intentional living platform - Focus with intention, every moment matters." },
+  { name: "Sunsets for the Soul", url: "https://sunsetsforthesoul.com", desc: "2000+ sunset photographs from a decade living on a sailboat, with reflections on life and love." },
+  { name: "Family Unity Hub", url: "https://familyunityhub.com", desc: "Resources and tools for strengthening family relationships and preserving family memories." },
+  { name: "FairBill Analyzer", url: "https://fairbillanalyzer.com", desc: "Legislative analysis tool for understanding and tracking government bills with AI-powered insights." },
+  { name: "The Art of Citizenship", url: "https://theartofcitizenship.com", desc: "Big-tent civics hub for exploring what it means to be an engaged American citizen." }
 ];
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Christopher J. Bradley Projects",
+  "description": "A connected ecosystem of educational platforms focused on liberty, learning, love, and intentional living.",
+  "itemListElement": projects.map((p, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "url": p.url,
+    "name": p.name,
+    "description": p.desc
+  }))
+};
 ---
 
 <Layout
   title="Projects | Christopher J. Bradley"
-  description="Explore Christopher J. Bradley's platforms dedicated to time consciousness, love, family unity, and constitutional principles."
+  description="Explore all of Christopher J. Bradley's projects — from civic education to mindfulness and family unity. A connected ecosystem for liberty, learning, and love."
+  canonical="https://christopherjbradley.com/projects"
+  keywords={["Christopher J Bradley projects", "civic education platforms", "liberty principles", "family unity tools", "educational technology"]}
+  schemaExtra={itemListSchema}
 >
   <Navigation />
-
-  <main id="main-content" class="min-h-screen bg-white dark:bg-slate-950">
-    <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-      <h1 class="text-4xl font-bold text-liberty-navy dark:text-slate-100 mb-4">
-        Projects & Platforms
+  
+  <main id="main-content" class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-liberty-navy dark:text-slate-100">
+        Projects
       </h1>
-      <p class="text-xl text-liberty-navy/70 dark:text-slate-300 mb-12">
-        Dedicated to time consciousness, love, family unity, and constitutional principles
+      <p class="mt-4 text-xl text-liberty-navy/80 dark:text-slate-300 max-w-3xl mx-auto">
+        A connected ecosystem for liberty, learning, love, and deliberate time.
       </p>
+      <p class="mt-3 text-lg text-liberty-navy/70 dark:text-slate-400">
+        Each platform serves a unique purpose while supporting the same mission: empowering families with knowledge, tools, and intention.
+      </p>
+    </div>
 
-      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project) => (
-          <a
+    <!-- Projects Grid -->
+    <ul class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project) => (
+        <li class="group">
+          <a 
             href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block p-6 bg-white dark:bg-slate-800 rounded-lg border-2 border-gray-200 dark:border-slate-700 hover:border-liberty-gold dark:hover:border-liberty-gold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 group"
-            aria-label={`Visit ${project.title} website`}
+            class="block p-6 h-full bg-white dark:bg-slate-900 rounded-lg border-2 border-gray-200 dark:border-slate-700 hover:border-liberty-gold hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
-            <h2 class="text-xl font-bold text-liberty-navy dark:text-slate-100 mb-3 group-hover:text-liberty-gold transition-colors">
-              {project.title}
+            <h2 class="text-xl font-bold text-liberty-burgundy group-hover:text-liberty-gold transition-colors">
+              {project.name}
             </h2>
-            <p class="text-liberty-navy/70 dark:text-slate-300 mb-4">
-              {project.description}
+            <p class="mt-3 text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
+              {project.desc}
             </p>
-            <span class="inline-flex items-center text-sm font-medium text-liberty-gold group-hover:underline">
-              Visit Site
-              <svg class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </span>
+            <div class="mt-4 text-sm font-medium text-liberty-gold group-hover:underline">
+              Visit Site →
+            </div>
           </a>
-        ))}
-      </div>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Call to Action -->
+    <div class="mt-16 p-8 bg-gradient-to-b from-liberty-cream/30 to-white dark:from-slate-900/50 dark:to-slate-950 rounded-2xl border border-liberty-navy/10 dark:border-slate-700">
+      <h2 class="text-2xl font-bold text-liberty-navy dark:text-slate-100 text-center">
+        Connected by Purpose
+      </h2>
+      <p class="mt-3 text-center text-liberty-navy/80 dark:text-slate-300 max-w-2xl mx-auto">
+        These platforms work together to create a comprehensive approach to education, family strength, and civic engagement. 
+        Whether you're a parent, educator, or concerned citizen, there's a tool here to support your journey.
+      </p>
     </div>
   </main>
 

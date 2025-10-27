@@ -1,0 +1,172 @@
+---
+import Layout from '../layouts/LayoutNew.astro';
+import Navigation from '../components/Navigation.astro';
+import FooterEnhanced from '../components/FooterEnhanced.astro';
+
+const featuredProjects = [
+  { 
+    name: "The Citizen's Compass", 
+    url: "https://thecitizenscompass.netlify.app",
+    icon: "🧭",
+    desc: "Teaching America's founding principles"
+  },
+  { 
+    name: "Love Everyone", 
+    url: "https://loveeveryone.love",
+    icon: "❤️",
+    desc: "Start with you"
+  },
+  { 
+    name: "There Is Still Time", 
+    url: "https://thereisstilltime.com",
+    icon: "⏳",
+    desc: "Every moment matters"
+  },
+];
+---
+
+<Layout 
+  title="Christopher J. Bradley | Gulf War Veteran, Love Advocate, Civic Educator"
+  description="Gulf War veteran and civic educator teaching liberty principles to families. Creator of educational platforms focused on American founding principles, family unity, and intentional living. Love everyone, start with you."
+>
+  <Navigation />
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-liberty-cream/30 to-white dark:from-slate-900 dark:to-slate-950">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div class="text-center animate-fade-in">
+          <h1 class="text-4xl font-bold tracking-tight text-liberty-navy dark:text-slate-100 sm:text-5xl md:text-6xl">
+            Christopher J. Bradley
+          </h1>
+          <p class="mt-4 text-xl text-liberty-navy/80 dark:text-slate-300 max-w-3xl mx-auto">
+            Gulf War Veteran, Lawyer, Love Advocate, Family Court Reform Activist
+          </p>
+          <p class="mt-6 text-lg text-liberty-navy/70 dark:text-slate-400 max-w-2xl mx-auto">
+            Teaching liberty principles to families. Spreading the message: Love everyone, start with you.
+          </p>
+          
+          <!-- Featured Projects Quick Links -->
+          <div class="mt-10 flex flex-wrap gap-4 justify-center">
+            {featuredProjects.map((project) => (
+              <a
+                href={project.url}
+                class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border-2 border-liberty-navy/20 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 hover:border-liberty-gold hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+                rel="noopener"
+              >
+                <span class="text-2xl" aria-hidden="true">{project.icon}</span>
+                <span class="text-sm font-medium text-liberty-navy dark:text-slate-100">{project.name}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Message Section -->
+    <section class="py-16 bg-white dark:bg-slate-950">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-liberty-navy dark:text-slate-100 mb-6">
+            The Greatest Lesson
+          </h2>
+          <div class="prose prose-lg max-w-none dark:prose-invert">
+            <p class="text-liberty-navy/80 dark:text-slate-300 leading-relaxed">
+              For most of the last decade, I lived on a sailboat along the northwest gulf coast of Florida.
+              I photographed over 2,000 sunsets in the same sacred space and learned the greatest lesson:
+              Life is simple, love everyone and start with you.
+            </p>
+            <blockquote class="border-l-4 border-liberty-gold pl-4 italic text-xl my-8">
+              What if you are the person we are all waiting on?
+            </blockquote>
+            <p class="text-liberty-navy/80 dark:text-slate-300 leading-relaxed">
+              We could all live in peace on this earth if each of us simply made peace with every person we know.
+              If we each decided to love everyone, it would be game over - love wins.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Ecosystem Section -->
+    <section class="py-16 bg-gradient-to-b from-liberty-cream/10 to-white dark:from-slate-900/30 dark:to-slate-950">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-liberty-navy dark:text-slate-100 mb-4">
+            A Connected Ecosystem
+          </h2>
+          <p class="text-lg text-liberty-navy/70 dark:text-slate-400 max-w-3xl mx-auto">
+            I've created 9 platforms that work together to support families, educators, and citizens. 
+            Each serves a unique purpose — from teaching constitutional principles to children, 
+            to providing tools for mindful living, to analyzing legislation.
+          </p>
+        </div>
+
+        <!-- Value Props Grid -->
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <div class="text-center p-6">
+            <div class="text-4xl mb-3">📚</div>
+            <h3 class="font-bold text-lg text-liberty-navy dark:text-slate-100 mb-2">Education</h3>
+            <p class="text-sm text-liberty-navy/70 dark:text-slate-400">
+              Teaching liberty principles and civic engagement to the next generation
+            </p>
+          </div>
+          <div class="text-center p-6">
+            <div class="text-4xl mb-3">👨‍👩‍👧‍👦</div>
+            <h3 class="font-bold text-lg text-liberty-navy dark:text-slate-100 mb-2">Family Unity</h3>
+            <p class="text-sm text-liberty-navy/70 dark:text-slate-400">
+              Tools and resources for strengthening family bonds and preserving memories
+            </p>
+          </div>
+          <div class="text-center p-6">
+            <div class="text-4xl mb-3">⚖️</div>
+            <h3 class="font-bold text-lg text-liberty-navy dark:text-slate-100 mb-2">Civic Engagement</h3>
+            <p class="text-sm text-liberty-navy/70 dark:text-slate-400">
+              Understanding government, analyzing legislation, and advocating for reform
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a
+            href="/projects"
+            class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-gradient-liberty hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300"
+            aria-label="Explore all Christopher's projects"
+          >
+            Explore All 9 Projects
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-12 bg-liberty-cream/20 dark:bg-slate-900/50">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+        <h3 class="text-2xl font-bold text-liberty-navy dark:text-slate-100 mb-4">
+          Ready to Learn More?
+        </h3>
+        <p class="text-liberty-navy/70 dark:text-slate-400 mb-6">
+          Discover the full story behind the platforms and the mission
+        </p>
+        <div class="flex gap-4 justify-center flex-wrap">
+          <a
+            href="/about"
+            class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-liberty hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300"
+            aria-label="Learn more about Christopher"
+          >
+            About Christopher
+          </a>
+          <a
+            href="/projects"
+            class="inline-flex items-center px-6 py-3 border-2 border-liberty-navy text-base font-medium rounded-md text-liberty-navy dark:text-slate-100 dark:border-slate-300 bg-white dark:bg-slate-800 hover:bg-liberty-navy hover:text-white dark:hover:bg-slate-700 transition-all duration-300"
+            aria-label="View all projects with descriptions"
+          >
+            View All Projects
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <FooterEnhanced />
+</Layout>

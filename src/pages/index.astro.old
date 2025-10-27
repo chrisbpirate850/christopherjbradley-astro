@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Christopher J. Bradley | Gulf War Veteran, Lawyer, Love Advocate, Civic Educator">
+<Layout title="Christopher J. Bradley | Gulf War Veteran, Love Advocate, Civic Educator">
   <Navigation />
 
   <main id="main-content">
@@ -21,19 +21,12 @@ import Footer from '../components/Footer.astro';
           <p class="mt-6 text-lg text-liberty-navy/70 dark:text-slate-400 max-w-2xl mx-auto">
             Teaching liberty principles to families. Spreading the message: Love everyone, start with you.
           </p>
-          </p>
-
-          <img
-            src="/images/disengage-from-conflict-hero.svg"
-            alt="Disengage from Conflict, Dwell in Empathy - Ocean wave with sunset"
-            class="mt-6 max-w-2xl mx-auto h-auto"
-          />
         </div>
       </div>
     </section>
 
     <!-- Core Message Section -->
-    <section class="py-8 bg-white dark:bg-slate-950">
+    <section class="py-16 bg-white dark:bg-slate-950">
       <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div class="text-center">
           <h2 class="text-3xl font-bold text-liberty-navy dark:text-slate-100 mb-6">

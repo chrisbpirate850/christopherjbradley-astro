@@ -14,7 +14,7 @@
   }
 
   *:focus-visible {
-    @apply ring-2 ring-liberty-gold ring-offset-2;
+    @apply ring-2 ring-[#f59e0b] ring-offset-2;
   }
 }
 

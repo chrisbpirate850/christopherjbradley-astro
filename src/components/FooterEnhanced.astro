@@ -1,0 +1,57 @@
+---
+const currentYear = new Date().getFullYear();
+
+const projects = [
+  { name: "The Citizen's Compass", url: "https://thecitizenscompass.netlify.app" },
+  { name: "Liberty's Principles Media", url: "https://libertysprinciplesmedia.com" },
+  { name: "Liberty's Principles Pals", url: "https://libertysprinciplespals.com" },
+  { name: "Love Everyone", url: "https://loveeveryone.love" },
+  { name: "There Is Still Time", url: "https://thereisstilltime.com" },
+  { name: "Sunsets for the Soul", url: "https://sunsetsforthesoul.com" },
+  { name: "Family Unity Hub", url: "https://familyunityhub.com" },
+  { name: "FairBill Analyzer", url: "https://fairbillanalyzer.com" },
+  { name: "The Art of Citizenship", url: "https://theartofcitizenship.com" }
+];
+---
+
+<footer class="border-t border-liberty-navy/10 bg-liberty-cream/20 dark:border-slate-700 dark:bg-slate-900/50 mt-16" role="contentinfo">
+  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <!-- Related Projects Section -->
+    <section aria-label="Related Projects" class="mb-10">
+      <h2 class="text-2xl font-bold text-liberty-navy dark:text-slate-100 mb-6 text-center">
+        My Other Projects
+      </h2>
+      <p class="text-center text-liberty-navy/70 dark:text-slate-400 mb-6 max-w-2xl mx-auto">
+        A connected ecosystem of platforms focused on education, family strength, and civic engagement.
+      </p>
+      <ul class="grid gap-3 sm:grid-cols-2 md:grid-cols-3 max-w-4xl mx-auto">
+        {projects.map((project) => (
+          <li>
+            <a
+              href={project.url}
+              class="text-liberty-burgundy dark:text-liberty-gold hover:underline hover:text-liberty-gold transition-colors text-sm"
+              rel="noopener"
+            >
+              {project.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <div class="text-center mt-6">
+        <a 
+          href="/projects" 
+          class="inline-flex items-center text-sm font-medium text-liberty-gold hover:underline"
+        >
+          View all projects with descriptions →
+        </a>
+      </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="pt-8 border-t border-liberty-navy/10 dark:border-slate-700">
+      <p class="text-sm text-liberty-navy/70 dark:text-slate-300 text-center">
+        &copy; {currentYear} Christopher J. Bradley. Love you all.
+      </p>
+    </div>
+  </div>
+</footer>
