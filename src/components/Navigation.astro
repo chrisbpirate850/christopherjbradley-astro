@@ -4,6 +4,7 @@ const currentPath = Astro.url.pathname;
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
+  { href: '/books', label: 'Books' },
   { href: '/projects', label: 'Projects' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -16,14 +17,15 @@ function isActive(href: string, path: string) {
 }
 ---
 
-<header class="border-b border-navy/10 dark:border-slate-700">
-  <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<header class="border-b border-liberty-navy/10 dark:border-slate-700" role="banner">
+  <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
     <div class="flex h-16 items-center justify-between">
       <!-- Logo/Brand -->
       <div class="flex items-center">
         <a
           href="/"
-          class="text-xl font-bold text-navy dark:text-slate-100 hover:text-gold transition-colors"
+          class="text-xl font-bold text-liberty-navy dark:text-slate-100 hover:text-liberty-gold transition-colors"
+          aria-label="Christopher J. Bradley home"
         >
           Christopher J. Bradley
         </a>
@@ -34,23 +36,54 @@ function isActive(href: string, path: string) {
         {navLinks.map((link) => (
           <a
             href={link.href}
-            class={`text-sm font-medium transition-colors ${
+            class={`text-sm font-medium transition-colors min-h-[44px] flex items-center ${
               isActive(link.href, currentPath)
-                ? 'text-navy dark:text-slate-100'
-                : 'text-navy/70 dark:text-slate-300 hover:text-navy dark:hover:text-slate-100'
+                ? 'text-liberty-navy dark:text-slate-100'
+                : 'text-liberty-navy/70 dark:text-slate-300 hover:text-liberty-gold dark:hover:text-liberty-gold'
             }`}
+            aria-label={`Navigate to ${link.label}`}
           >
             {link.label}
           </a>
         ))}
+
+        <!-- Dark Mode Toggle -->
+        <button
+          id="theme-toggle"
+          type="button"
+          class="rounded-lg p-2.5 text-sm text-liberty-navy dark:text-slate-100 hover:bg-liberty-gold/10 dark:hover:bg-slate-800 transition-colors min-h-[44px] min-w-[44px]"
+          aria-label="Toggle dark mode"
+        >
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
       </div>
 
-      <!-- Mobile Menu Button -->
-      <div class="md:hidden">
+      <!-- Mobile Menu Button and Theme Toggle -->
+      <div class="md:hidden flex items-center gap-2">
+        <!-- Dark Mode Toggle (Mobile) -->
+        <button
+          id="theme-toggle-mobile"
+          type="button"
+          class="rounded-lg p-2 text-liberty-navy dark:text-slate-100 hover:bg-liberty-gold/10 dark:hover:bg-slate-800 transition-colors min-h-[44px] min-w-[44px]"
+          aria-label="Toggle dark mode"
+        >
+          <svg class="theme-toggle-dark-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg class="theme-toggle-light-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+
         <button
           id="mobile-menu-button"
           type="button"
-          class="inline-flex items-center justify-center rounded-md p-2 text-navy dark:text-slate-100 hover:bg-navy/5 dark:hover:bg-slate-800"
+          class="inline-flex items-center justify-center rounded-md p-2 text-liberty-navy dark:text-slate-100 hover:bg-liberty-gold/10 dark:hover:bg-slate-800 min-h-[44px] min-w-[44px]"
           aria-controls="mobile-menu"
           aria-expanded="false"
         >
@@ -75,15 +108,17 @@ function isActive(href: string, path: string) {
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden pb-4">
+    <div id="mobile-menu" class="hidden md:hidden pb-4" role="menu">
       {navLinks.map((link) => (
         <a
           href={link.href}
-          class={`block px-3 py-2 rounded-md text-base font-medium ${
+          class={`block px-3 py-2 rounded-md text-base font-medium min-h-[44px] flex items-center ${
             isActive(link.href, currentPath)
-              ? 'bg-navy/5 dark:bg-slate-800 text-navy dark:text-slate-100'
-              : 'text-navy/70 dark:text-slate-300 hover:bg-navy/5 dark:hover:bg-slate-800 hover:text-navy dark:hover:text-slate-100'
+              ? 'bg-liberty-gold/10 dark:bg-slate-800 text-liberty-navy dark:text-slate-100'
+              : 'text-liberty-navy/70 dark:text-slate-300 hover:bg-liberty-cream dark:hover:bg-slate-800 hover:text-liberty-gold dark:hover:text-liberty-gold'
           }`}
+          role="menuitem"
+          aria-label={`Navigate to ${link.label}`}
         >
           {link.label}
         </a>
@@ -102,4 +137,34 @@ function isActive(href: string, path: string) {
     button.setAttribute('aria-expanded', (!isExpanded).toString());
     menu?.classList.toggle('hidden');
   });
+
+  // Dark mode toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+  const themeToggleDarkIcons = document.querySelectorAll('#theme-toggle-dark-icon, .theme-toggle-dark-icon');
+  const themeToggleLightIcons = document.querySelectorAll('#theme-toggle-light-icon, .theme-toggle-light-icon');
+
+  // Set the initial icon state based on current theme
+  function updateIcons() {
+    const isDark = document.documentElement.classList.contains('dark');
+    themeToggleDarkIcons.forEach(icon => {
+      icon.classList.toggle('hidden', isDark);
+    });
+    themeToggleLightIcons.forEach(icon => {
+      icon.classList.toggle('hidden', !isDark);
+    });
+  }
+
+  // Initialize icons
+  updateIcons();
+
+  // Toggle theme function
+  function toggleTheme() {
+    document.documentElement.classList.toggle('dark');
+    updateIcons();
+  }
+
+  // Add event listeners
+  themeToggle?.addEventListener('click', toggleTheme);
+  themeToggleMobile?.addEventListener('click', toggleTheme);
 </script>
