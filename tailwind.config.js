@@ -5,9 +5,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: '#1e3a5f',
-        gold: '#d4a574',
-        red: '#8b3838',
+        // Brand colors - consistent with Liberty's Principles Media and FairBill
+        'liberty-navy': '#1e3a8a',
+        'liberty-burgundy': '#991b1b',
+        'liberty-gold': '#f59e0b',
+        'liberty-cream': '#fef3c7',
+        // Legacy aliases for backwards compatibility
+        navy: '#1e3a8a',
+        gold: '#f59e0b',
+        red: '#991b1b',
+      },
+      backgroundImage: {
+        'gradient-liberty': 'linear-gradient(135deg, #1e3a8a 0%, #991b1b 100%)',
+        'gradient-gold': 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+        'gradient-subtle': 'linear-gradient(to bottom, #fef3c7 0%, #ffffff 100%)',
       },
     },
   },

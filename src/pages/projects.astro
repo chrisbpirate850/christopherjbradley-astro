@@ -6,8 +6,28 @@ import Footer from '../components/Footer.astro';
 const projects = [
   {
     title: 'There Is Still Time',
-    url: 'https://thereisstilltime.com',
-    description: 'A visual focus timer app designed for serious exam prep students. Symbolic hourglasses help students stay focused and track their study sessions.',
+    url: 'https://app.thereisstilltime.com',
+    description: 'A visual focus timer app with AI-generated hourglass animations. Built on the Pomodoro Technique for students, professionals, and deep work practitioners seeking distraction-free productivity.',
+  },
+  {
+    title: 'Liberty\'s Principles Pals',
+    url: 'https://libertysprinciplespals.com',
+    description: 'Children\'s book series teaching American founding principles through garden adventures. Six books (28 planned) featuring Ande, Sam, and Nanny Dolores make civics education fun and engaging for ages 5-10.',
+  },
+  {
+    title: 'The Art of Citizenship',
+    url: 'https://vercellibertybooks.web.app',
+    description: 'Comprehensive civic education platform exploring constitutional principles, founding documents, and the responsibilities of engaged citizenship in modern America.',
+  },
+  {
+    title: 'The Citizen\'s AI Compass',
+    url: 'https://the-citizens-ai-compass.web.app/',
+    description: 'Constitutional education resources designed for families. An AI-powered platform helping households understand and discuss American founding principles together.',
+  },
+  {
+    title: 'Find My Work (Claude)',
+    url: 'https://findmyworkclaude.netlify.app',
+    description: 'Project management dashboard tracking website deployment status and AI discoverability. Monitors multiple civic education and peace advocacy sites for search engine optimization and crawlability.',
   },
   {
     title: 'Love Everyone',
@@ -38,12 +58,12 @@ const projects = [
 >
   <Navigation />
 
-  <main class="min-h-screen bg-white dark:bg-slate-950">
+  <main id="main-content" class="min-h-screen bg-white dark:bg-slate-950">
     <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-      <h1 class="text-4xl font-bold text-navy dark:text-slate-100 mb-4">
+      <h1 class="text-4xl font-bold text-liberty-navy dark:text-slate-100 mb-4">
         Projects & Platforms
       </h1>
-      <p class="text-xl text-navy/70 dark:text-slate-300 mb-12">
+      <p class="text-xl text-liberty-navy/70 dark:text-slate-300 mb-12">
         Dedicated to time consciousness, love, family unity, and constitutional principles
       </p>
 
@@ -53,17 +73,18 @@ const projects = [
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="block p-6 bg-white dark:bg-slate-800 rounded-lg border-2 border-navy/10 dark:border-slate-700 hover:border-gold dark:hover:border-gold transition-all hover:shadow-lg group"
+            class="block p-6 bg-white dark:bg-slate-800 rounded-lg border-2 border-gray-200 dark:border-slate-700 hover:border-liberty-gold dark:hover:border-liberty-gold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 group"
+            aria-label={`Visit ${project.title} website`}
           >
-            <h2 class="text-xl font-bold text-navy dark:text-slate-100 mb-3 group-hover:text-gold transition-colors">
+            <h2 class="text-xl font-bold text-liberty-navy dark:text-slate-100 mb-3 group-hover:text-liberty-gold transition-colors">
               {project.title}
             </h2>
-            <p class="text-navy/70 dark:text-slate-300 mb-4">
+            <p class="text-liberty-navy/70 dark:text-slate-300 mb-4">
               {project.description}
             </p>
-            <span class="inline-flex items-center text-sm font-medium text-gold group-hover:underline">
+            <span class="inline-flex items-center text-sm font-medium text-liberty-gold group-hover:underline">
               Visit Site
-              <svg class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </span>
