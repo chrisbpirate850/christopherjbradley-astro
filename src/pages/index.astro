@@ -2,6 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+
+const projects = [
+  { name: "The Citizen's Compass", url: "https://thecitizenscompass.netlify.app", desc: "Educational platform teaching American founding principles to families and children through interactive learning paths." },
+  { name: "Liberty's Principles Media", url: "https://libertysprinciplesmedia.com", desc: "Media and educational content focused on teaching constitutional principles and American values." },
+  { name: "Liberty's Principles Pals", url: "https://libertysprinciplespals.com", desc: "Children's educational series (28 books) for learning about American values and founding principles." },
+  { name: "Love Everyone", url: "https://loveeveryone.love", desc: "Platform spreading the transformative message: Love everyone, start with you." },
+  { name: "There Is Still Time", url: "https://thereisstilltime.com", desc: "Mindfulness and intentional living platform - Focus with intention, every moment matters." },
+  { name: "Sunsets for the Soul", url: "https://sunsetsforthesoul.com", desc: "2000+ sunset photographs from a decade living on a sailboat, with reflections on life and love." },
+  { name: "Family Unity Hub", url: "https://familyunityhub.com", desc: "Resources and tools for strengthening family relationships and preserving family memories." },
+  { name: "FairBill Analyzer", url: "https://fairbillanalyzer.com", desc: "Legislative analysis tool for understanding and tracking government bills with AI-powered insights." },
+  { name: "The Art of Citizenship", url: "https://theartofcitizenship.com", desc: "Big-tent civics hub for exploring what it means to be an engaged American citizen." }
+];
 ---
 
 <Layout title="Christopher J. Bradley | Gulf War Veteran, Lawyer, Love Advocate, Civic Educator">
@@ -57,6 +69,54 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
+    <!-- Projects Section -->
+    <section class="py-16 bg-white dark:bg-slate-950">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-liberty-navy dark:text-slate-100">
+            Projects
+          </h2>
+          <p class="mt-4 text-xl text-liberty-navy/80 dark:text-slate-300 max-w-3xl mx-auto">
+            A connected ecosystem for liberty, learning, love, and deliberate time.
+          </p>
+          <p class="mt-3 text-lg text-liberty-navy/70 dark:text-slate-400">
+            Each platform serves a unique purpose while supporting the same mission: empowering families with knowledge, tools, and intention.
+          </p>
+        </div>
+
+        <ul class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => (
+            <li class="group">
+              <a
+                href={project.url}
+                class="block p-6 h-full bg-white dark:bg-slate-900 rounded-lg border-2 border-gray-200 dark:border-slate-700 hover:border-liberty-gold hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <h3 class="text-xl font-bold text-liberty-burgundy group-hover:text-liberty-gold transition-colors">
+                  {project.name}
+                </h3>
+                <p class="mt-3 text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
+                  {project.desc}
+                </p>
+                <div class="mt-4 text-sm font-medium text-liberty-gold group-hover:underline">
+                  Visit Site →
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <div class="mt-12 p-8 bg-gradient-to-b from-liberty-cream/30 to-white dark:from-slate-900/50 dark:to-slate-950 rounded-2xl border border-liberty-navy/10 dark:border-slate-700">
+          <h3 class="text-2xl font-bold text-liberty-navy dark:text-slate-100 text-center">
+            Connected by Purpose
+          </h3>
+          <p class="mt-3 text-center text-liberty-navy/80 dark:text-slate-300 max-w-2xl mx-auto">
+            These platforms work together to create a comprehensive approach to education, family strength, and civic engagement.
+            Whether you're a parent, educator, or concerned citizen, there's a tool here to support your journey.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Call to Action -->
     <section class="py-12 bg-liberty-cream/20 dark:bg-slate-900/50">
       <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
@@ -70,13 +130,6 @@ import Footer from '../components/Footer.astro';
             aria-label="Learn more about Christopher"
           >
             About Christopher
-          </a>
-          <a
-            href="/projects"
-            class="inline-flex items-center px-6 py-3 border-2 border-liberty-navy text-base font-medium rounded-md text-liberty-navy dark:text-slate-100 dark:border-slate-300 bg-white dark:bg-slate-800 hover:bg-liberty-navy hover:text-white dark:hover:bg-slate-700 transition-all duration-300"
-            aria-label="View Christopher's projects"
-          >
-            View Projects
           </a>
         </div>
       </div>
