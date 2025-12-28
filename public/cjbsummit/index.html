@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The First Annual Christopher J. Bradley Summit | July 4-5, 2026</title>
+    <meta name="description" content="Calling all Christopher J. Bradleys! Join the first-ever gathering of people who share this exact name. July 4-5, 2026 - Celebrating America's 250th with 2,287 potential namesakes.">
+    <meta name="author" content="Christopher J. Bradley">
+    <meta name="keywords" content="Christopher J Bradley, CJB Summit, name gathering, America 250, July 4 2026, namesake convention, same name meetup">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="The First Annual Christopher J. Bradley Summit | July 4-5, 2026">
+    <meta property="og:description" content="How many Christopher J. Bradleys can we gather in one place? Join us July 4-5, 2026 for America's 250th anniversary. 2,287 potential namesakes across 50 states.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://christopherjbradley.com/convention/">
+    <meta property="og:site_name" content="Christopher J. Bradley">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://christopherjbradley.com/images/cjbsummit-og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="The First Annual Christopher J. Bradley Summit - July 4-5, 2026">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The First Annual Christopher J. Bradley Summit">
+    <meta name="twitter:description" content="How many CJBs can we gather? Join 2,287 potential namesakes July 4-5, 2026 for America's 250th!">
+    <meta name="twitter:image" content="https://christopherjbradley.com/images/cjbsummit-og-image.png">
+    <meta name="twitter:image:alt" content="CJB Summit 2026 - E Pluribus Unum, Out of Many, One Name">
+
+    <!-- Additional SEO -->
+    <link rel="canonical" href="https://christopherjbradley.com/convention/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-navy: #1a2744;
+            --color-gold: #c9a227;
+            --color-gold-light: #e8d496;
+            --color-cream: #faf8f3;
+            --color-warm-white: #fffef9;
+            --color-rust: #a65d3f;
+            --color-sage: #5a7c65;
+            --color-text: #2c3e50;
+            --color-text-light: #5a6c7d;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Source Sans 3', -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            background: var(--color-cream);
+            color: var(--color-text);
+            line-height: 1.7;
+            font-size: 17px;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(26, 39, 68, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            transform: translateY(-100%);
+            transition: transform 0.4s ease;
+        }
+        .nav.visible { transform: translateY(0); }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-family: var(--font-display);
+            color: var(--color-gold);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--color-cream);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--color-gold); }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(165deg, var(--color-navy) 0%, #2a3f5f 50%, var(--color-navy) 100%);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 2rem;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 80%, rgba(201, 162, 39, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(201, 162, 39, 0.1) 0%, transparent 40%);
+            pointer-events: none;
+        }
+        .hero-stars {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .star {
+            position: absolute;
+            width: 4px; height: 4px;
+            background: var(--color-gold);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: twinkle 3s ease-in-out infinite;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        .hero-badge {
+            background: var(--color-gold);
+            color: var(--color-navy);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+            animation: fadeInDown 0.8s ease-out;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
+            color: var(--color-warm-white);
+            text-align: center;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        .hero-title .highlight {
+            color: var(--color-gold);
+            display: block;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero-subtitle {
+            font-family: var(--font-display);
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            color: var(--color-gold-light);
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        .hero-date {
+            font-family: var(--font-mono);
+            font-size: 1.1rem;
+            color: var(--color-cream);
+            letter-spacing: 0.15em;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+        .stat { text-align: center; }
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-gold);
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--color-cream);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 0.5rem;
+        }
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out 1s both;
+        }
+        .btn {
+            padding: 1rem 2.5rem;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--color-gold);
+            color: var(--color-navy);
+        }
+        .btn-primary:hover {
+            background: var(--color-gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(201, 162, 39, 0.3);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-cream);
+            border: 2px solid var(--color-cream);
+        }
+        .btn-secondary:hover {
+            background: var(--color-cream);
+            color: var(--color-navy);
+        }
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+        .scroll-indicator svg {
+            width: 30px; height: 30px;
+            stroke: var(--color-gold-light);
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* Sections */
+        section { padding: 6rem 2rem; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .section-label {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--color-rust);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+        }
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--color-navy);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        /* Story */
+        .story { background: var(--color-warm-white); }
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-top: 3rem;
+        }
+        .story-content p {
+            margin-bottom: 1.5rem;
+            color: var(--color-text);
+        }
+        .story-content p:first-of-type::first-letter {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            float: left;
+            line-height: 0.8;
+            padding-right: 0.5rem;
+            color: var(--color-navy);
+        }
+        .precedent-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .precedent-card {
+            background: var(--color-cream);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--color-gold);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .precedent-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .precedent-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--color-navy);
+            margin-bottom: 0.5rem;
+        }
+        .precedent-card .year {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--color-rust);
+            margin-bottom: 0.5rem;
+        }
+        .precedent-card p {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+        }
+        .precedent-card .stat-highlight {
+            font-weight: 600;
+            color: var(--color-sage);
+        }
+
+        /* Notable */
+        .notable {
+            background: var(--color-navy);
+            color: var(--color-cream);
+        }
+        .notable .section-label { color: var(--color-gold); }
+        .notable .section-title { color: var(--color-warm-white); }
+        .notable-intro {
+            max-width: 700px;
+            margin-bottom: 3rem;
+            color: var(--color-gold-light);
+            font-size: 1.1rem;
+        }
+        .notable-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .notable-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            transition: all 0.3s ease;
+        }
+        .notable-card:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: var(--color-gold);
+            transform: translateY(-5px);
+        }
+        .notable-card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .notable-icon {
+            width: 50px; height: 50px;
+            background: var(--color-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .notable-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            margin-bottom: 0.25rem;
+        }
+        .notable-card .title {
+            font-size: 0.9rem;
+            color: var(--color-gold);
+        }
+        .notable-card .dates {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--color-gold-light);
+            margin-top: 0.25rem;
+        }
+        .notable-card p {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.6;
+        }
+        .notable-card .linkedin-note {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--color-gold-light);
+        }
+
+        /* Challenge */
+        .challenge {
+            background: linear-gradient(135deg, var(--color-cream) 0%, #f5f0e6 100%);
+        }
+        .challenge-box {
+            background: var(--color-warm-white);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            border: 2px solid var(--color-gold);
+            margin-top: 2rem;
+        }
+        .challenge-box h3 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--color-navy);
+            margin-bottom: 1rem;
+        }
+        .challenge-context {
+            background: rgba(201, 162, 39, 0.1);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        .challenge-context h4 {
+            font-family: var(--font-display);
+            color: var(--color-navy);
+            margin-bottom: 0.5rem;
+        }
+        .challenge-context p {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+        }
+        .resources-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .resource-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: var(--color-cream);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--color-text);
+            transition: all 0.3s ease;
+        }
+        .resource-item:hover {
+            background: var(--color-navy);
+            color: var(--color-cream);
+        }
+        .resource-item svg {
+            width: 24px; height: 24px;
+            flex-shrink: 0;
+        }
+
+        /* Mission */
+        .mission { background: var(--color-warm-white); }
+        .mission-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        .mission-text p { margin-bottom: 1.5rem; }
+        .mission-quote {
+            background: var(--color-navy);
+            color: var(--color-cream);
+            padding: 2rem;
+            border-radius: 12px;
+            position: relative;
+        }
+        .mission-quote::before {
+            content: '"';
+            font-family: var(--font-display);
+            font-size: 6rem;
+            color: var(--color-gold);
+            position: absolute;
+            top: -1rem; left: 1rem;
+            line-height: 1;
+            opacity: 0.5;
+        }
+        .mission-quote p {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 1.3rem;
+            line-height: 1.5;
+            position: relative;
+            z-index: 1;
+        }
+        .mission-quote cite {
+            display: block;
+            margin-top: 1rem;
+            font-style: normal;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: var(--color-gold);
+        }
+        .platform-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+        .platform-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--color-cream);
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            color: var(--color-text);
+            transition: all 0.3s ease;
+        }
+        .platform-link:hover {
+            background: var(--color-navy);
+            color: var(--color-cream);
+        }
+
+        /* Schedule */
+        .schedule { background: var(--color-cream); }
+        .schedule-days {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        .schedule-day {
+            background: var(--color-warm-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+        }
+        .schedule-day-header {
+            background: var(--color-navy);
+            color: var(--color-cream);
+            padding: 1.5rem 2rem;
+        }
+        .schedule-day-header h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+        }
+        .schedule-day-header .date {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: var(--color-gold);
+            margin-top: 0.25rem;
+        }
+        .schedule-items { padding: 1.5rem 2rem; }
+        .schedule-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .schedule-item:last-child { border-bottom: none; }
+        .schedule-time {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--color-rust);
+            min-width: 100px;
+        }
+        .schedule-event h4 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .schedule-event p {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+        }
+
+        /* Registry */
+        .registry {
+            background: linear-gradient(165deg, var(--color-navy) 0%, #2a3f5f 100%);
+            color: var(--color-cream);
+        }
+        .registry .section-label { color: var(--color-gold); }
+        .registry .section-title { color: var(--color-warm-white); }
+        .registry-intro {
+            max-width: 600px;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            color: var(--color-gold-light);
+        }
+        .registry-form {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 3rem;
+            max-width: 700px;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group.full-width { grid-column: 1 / -1; }
+        .form-group label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--color-gold-light);
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.875rem 1rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 6px;
+            background: rgba(255,255,255,0.05);
+            color: var(--color-cream);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-gold);
+            background: rgba(255,255,255,0.08);
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .form-note {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 1.5rem;
+        }
+        .form-submit { margin-top: 2rem; }
+
+        /* FAQ */
+        .faq { background: var(--color-warm-white); }
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .faq-item {
+            padding: 1.5rem;
+            background: var(--color-cream);
+            border-radius: 12px;
+            border-left: 4px solid var(--color-sage);
+        }
+        .faq-item h4 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--color-navy);
+            margin-bottom: 0.75rem;
+        }
+        .faq-item p {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+        }
+
+        /* Sponsors */
+        .sponsors { background: var(--color-cream); }
+        .sponsor-tiers {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .sponsor-tier {
+            background: var(--color-warm-white);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .sponsor-tier:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        .sponsor-tier.featured {
+            border-color: var(--color-gold);
+            position: relative;
+        }
+        .sponsor-tier.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-gold);
+            color: var(--color-navy);
+            padding: 0.25rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .tier-name {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--color-navy);
+            margin-bottom: 0.5rem;
+        }
+        .tier-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+        }
+        .tier-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--color-text-light);
+        }
+        .tier-benefits {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        .tier-benefits li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+        }
+        .tier-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-sage);
+            font-weight: bold;
+        }
+
+        /* Media */
+        .media {
+            background: var(--color-navy);
+            color: var(--color-cream);
+        }
+        .media .section-label { color: var(--color-gold); }
+        .media .section-title { color: var(--color-warm-white); }
+        .media-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+        .media-text p {
+            margin-bottom: 1.5rem;
+            color: rgba(255,255,255,0.85);
+        }
+        .media-contact {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+        }
+        .media-contact h4 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            color: var(--color-gold-light);
+        }
+        .contact-item svg {
+            width: 20px; height: 20px;
+            stroke: var(--color-gold);
+        }
+        .press-kit-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+            padding: 1rem 1.5rem;
+            background: var(--color-gold);
+            color: var(--color-navy);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .press-kit-btn:hover {
+            background: var(--color-gold-light);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f1724;
+            color: var(--color-cream);
+            padding: 4rem 2rem 2rem;
+        }
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-brand h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+        }
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .footer-links h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-gold-light);
+            margin-bottom: 1rem;
+        }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 0.5rem; }
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover { color: var(--color-gold); }
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.4);
+        }
+        .footer-bottom a {
+            color: var(--color-gold);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .story-grid,
+            .mission-content,
+            .schedule-days,
+            .faq-grid,
+            .sponsor-tiers,
+            .media-content,
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            .nav-links { display: none; }
+            .form-row { grid-template-columns: 1fr; }
+            .hero-stats { gap: 2rem; }
+        }
+        @media (max-width: 600px) {
+            section { padding: 4rem 1.5rem; }
+            .hero-title { font-size: 2.2rem; }
+            .stat-number { font-size: 2.2rem; }
+            .challenge-box,
+            .registry-form { padding: 2rem 1.5rem; }
+        }
+
+        /* Share Buttons */
+        .share-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(201, 162, 39, 0.3);
+        }
+        .share-section.hero-share {
+            border-top: none;
+            margin-top: 3rem;
+            padding-top: 0;
+        }
+        .share-label {
+            font-size: 0.85rem;
+            color: var(--color-gold-light);
+            font-family: var(--font-body);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .share-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--color-gold);
+            background: transparent;
+            color: var(--color-gold);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(201, 162, 39, 0.3);
+        }
+        .share-btn.twitter:hover { background: #1DA1F2; border-color: #1DA1F2; color: white; }
+        .share-btn.facebook:hover { background: #4267B2; border-color: #4267B2; color: white; }
+        .share-btn.linkedin:hover { background: #0077B5; border-color: #0077B5; color: white; }
+        .share-btn.copy:hover { background: var(--color-gold); border-color: var(--color-gold); color: var(--color-navy); }
+        .share-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+        /* Light section share buttons */
+        .story .share-section,
+        .challenge .share-section,
+        .faq .share-section,
+        .sponsors .share-section,
+        .mission .share-section,
+        .schedule .share-section {
+            border-top-color: rgba(26, 39, 68, 0.2);
+        }
+        .story .share-label,
+        .challenge .share-label,
+        .faq .share-label,
+        .sponsors .share-label,
+        .mission .share-label,
+        .schedule .share-label {
+            color: var(--color-text-light);
+        }
+        .story .share-btn,
+        .challenge .share-btn,
+        .faq .share-btn,
+        .sponsors .share-btn,
+        .mission .share-btn,
+        .schedule .share-btn {
+            border-color: var(--color-navy);
+            color: var(--color-navy);
+        }
+        .copy-toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-navy);
+            color: var(--color-gold);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1001;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .copy-toast.visible {
+            opacity: 1;
+        }
+        @media print {
+            .share-section, .copy-toast { display: none !important; }
+        }
+    </style>
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDQGsBLryrWGut4NE9ADxdXJTl4stU3JmQ",
+            authDomain: "christopherjbradley-com.firebaseapp.com",
+            projectId: "christopherjbradley-com",
+            storageBucket: "christopherjbradley-com.firebasestorage.app",
+            messagingSenderId: "662386180617",
+            appId: "1:662386180617:web:3b1710f78fe3b62a1c6ed8"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        window.submitRegistration = async function(formData) {
+            try {
+                await addDoc(collection(db, "cjb-summit-registrations"), {
+                    ...formData,
+                    registeredAt: serverTimestamp()
+                });
+                return true;
+            } catch (error) {
+                console.error("Error submitting registration:", error);
+                return false;
+            }
+        };
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">CJB Summit 2026</a>
+            <ul class="nav-links">
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#notable">Notable CJBs</a></li>
+                <li><a href="#challenge">The Challenge</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-stars" id="stars"></div>
+        <div class="hero-badge">America's 250th Anniversary</div>
+        <h1 class="hero-title">
+            The First Annual
+            <span class="highlight">Christopher J. Bradley</span>
+            Summit
+        </h1>
+        <p class="hero-subtitle">E Pluribus Unum — Out of Many, One Name</p>
+        <p class="hero-date">JULY 4-5, 2026 • NORTHWEST FLORIDA</p>
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number">2,287</div>
+                <div class="stat-label">CJBs in America</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">50</div>
+                <div class="stat-label">States Represented</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">250</div>
+                <div class="stat-label">Years of America</div>
+            </div>
+        </div>
+        <div class="hero-cta">
+            <a href="#register" class="btn btn-primary">I'm a Christopher J. Bradley</a>
+            <a href="#story" class="btn btn-secondary">Learn More</a>
+        </div>
+        <div class="share-section hero-share" id="hero-share">
+            <span class="share-label">Spread the Word:</span>
+            <div class="share-buttons">
+                <button class="share-btn twitter" onclick="shareTwitter('home')" title="Share on X (Twitter)">
+                    <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </button>
+                <button class="share-btn facebook" onclick="shareFacebook('home')" title="Share on Facebook">
+                    <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </button>
+                <button class="share-btn linkedin" onclick="shareLinkedIn('home')" title="Share on LinkedIn">
+                    <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </button>
+                <button class="share-btn copy" onclick="copyLink('home')" title="Copy link">
+                    <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story" id="story">
+        <div class="container">
+            <span class="section-label">The Concept</span>
+            <h2 class="section-title">What happens when everyone in the room shares your exact name?</h2>
+            <div class="story-grid">
+                <div class="story-content">
+                    <p>In 2021, a college student named Josh Swain sent a bizarre Facebook message to every other Josh Swain he could find: "You're all invited to fight for the name." What started as a pandemic joke became a global phenomenon. Nearly 1,000 people showed up in Lincoln, Nebraska. They raised $14,000 for charity. CNN, BBC, ESPN, and the Wall Street Journal covered it.</p>
+                    <p>But Josh wasn't the first. In 1995, a Brooklyn writer tracked down 22 men named Phil Campbell and brought them to Phil Campbell, Alabama (population 1,000). The reunion spawned a documentary. In 2019, a pub owner in England gathered 434 Nigels after learning no babies had been named Nigel in 2016. One flew in from Texas on crowdfunded money.</p>
+                    <p>Now it's our turn. There are <strong>2,287 Christopher J. Bradleys</strong> in the United States—mathematicians, doctors, veterans, actors, and one civic educator writing this from Northwest Florida. We share more than three words on a birth certificate. We share a story waiting to be told.</p>
+                    <p>On America's 250th birthday, let's find out what unites us beyond a name.</p>
+                </div>
+                <div class="precedent-cards">
+                    <div class="precedent-card">
+                        <span class="year">2021 & 2022</span>
+                        <h4>The Josh Fight</h4>
+                        <p>Started as a joke, became global news. <span class="stat-highlight">~1,000 attendees</span>, $14,000+ raised for children's hospital. Covered by CNN, NPR, BBC, WSJ, ESPN.</p>
+                    </div>
+                    <div class="precedent-card">
+                        <span class="year">1995, 2011</span>
+                        <h4>Phil Campbell Convention</h4>
+                        <p>Brooklyn writer mailed 330 letters, <span class="stat-highlight">22 Phil Campbells</span> gathered in Phil Campbell, Alabama. Spawned documentary "I'm With Phil."</p>
+                    </div>
+                    <div class="precedent-card">
+                        <span class="year">2019, 2022</span>
+                        <h4>Nigel Night</h4>
+                        <p>English pub owner gathered <span class="stat-highlight">434 Nigels</span> after zero babies were named Nigel in 2016. Free pints for verified Nigels.</p>
+                    </div>
+                    <div class="precedent-card">
+                        <span class="year">2017</span>
+                        <h4>World Record</h4>
+                        <p><span class="stat-highlight">2,325 Ivans</span> gathered in Bosnia—the current world record for most people with the same name in one place.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notable CJBs Section -->
+    <section class="notable" id="notable">
+        <div class="container">
+            <span class="section-label">Hall of Namesakes</span>
+            <h2 class="section-title">Notable Christopher J. Bradleys</h2>
+            <p class="notable-intro">From Oxford mathematicians to Hollywood stuntmen, Christopher J. Bradleys have made their mark across every field imaginable.</p>
+            <div class="notable-grid">
+                <div class="notable-card">
+                    <div class="notable-card-header">
+                        <div class="notable-icon">📐</div>
+                        <div>
+                            <h4>Dr. Christopher J. Bradley</h4>
+                            <div class="title">Mathematician, Oxford University</div>
+                            <div class="dates">1938–2013</div>
+                        </div>
+                    </div>
+                    <p>Fellow and Tutor in Mathematics at Jesus College, Oxford. Deputy Leader of the British Mathematical Olympiad Team. Author of "Challenges in Geometry" and 259+ geometry writings. A giant in competitive mathematics education.</p>
+                </div>
+                <div class="notable-card">
+                    <div class="notable-card-header">
+                        <div class="notable-icon">🫀</div>
+                        <div>
+                            <h4>Dr. Christopher J. Bradley, DO</h4>
+                            <div class="title">Cardiac Electrophysiologist</div>
+                            <div class="dates">Present</div>
+                        </div>
+                    </div>
+                    <p>Cardiologist at Henry Ford Health System in Southfield, Michigan. Multiple published research papers on cardiac ablation, pacemakers, and COVID-related cardiac issues. Michigan State University graduate.</p>
+                </div>
+                <div class="notable-card">
+                    <div class="notable-card-header">
+                        <div class="notable-icon">🎖️</div>
+                        <div>
+                            <h4>Christopher Bradley</h4>
+                            <div class="title">Navy Veteran</div>
+                            <div class="dates">Crestview, Florida</div>
+                        </div>
+                    </div>
+                    <p>Enlisted in 2003, severely injured in 2007 with spinal cord injury and TBI. Received an adapted home from Helping a Hero in Jacksonville in January 2025. A local hero from Northwest Florida.</p>
+                </div>
+                <div class="notable-card">
+                    <div class="notable-card-header">
+                        <div class="notable-icon">🎬</div>
+                        <div>
+                            <h4>Christopher Bradley</h4>
+                            <div class="title">Actor, Screenwriter, Professor</div>
+                            <div class="dates">Present</div>
+                        </div>
+                    </div>
+                    <p>Actor in films including "Waxwork" and "Leather Jacket Love Story." MFA in Screenwriting from UCLA. Currently Professor of Screenwriting at Arizona State University.</p>
+                </div>
+                <div class="notable-card">
+                    <div class="notable-card-header">
+                        <div class="notable-icon">🏰</div>
+                        <div>
+                            <h4>Christopher Bradley</h4>
+                            <div class="title">Walt Disney Imagineering</div>
+                            <div class="dates">Present</div>
+                        </div>
+                    </div>
+                    <p>Illustrator and Art Director who has worked on major theme park concepts for Disney. Bringing magic to life through visual storytelling.</p>
+                </div>
+                <div class="notable-card">
+                    <div class="notable-card-header">
+                        <div class="notable-icon">🎭</div>
+                        <div>
+                            <h4>Christopher Bradley</h4>
+                            <div class="title">Hollywood Stuntman</div>
+                            <div class="dates">Present</div>
+                        </div>
+                    </div>
+                    <p>Credits include "The Suicide Squad," "Willy's Wonderland," and "Time Lapse." Putting his body on the line for cinema.</p>
+                    <p class="linkedin-note">📊 1,400+ Christopher Bradley profiles on LinkedIn alone</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Genealogy Challenge Section -->
+    <section class="challenge" id="challenge">
+        <div class="container">
+            <span class="section-label">Crowdsourced Quest</span>
+            <h2 class="section-title">The Great CJB Genealogy Challenge</h2>
+            <div class="challenge-box">
+                <h3>🔍 Help Us Find the First Christopher J. Bradley in American History</h3>
+                <p>Who was the earliest person to bear our name on American soil? We're crowdsourcing this research and will unveil the findings at the Summit.</p>
+                <div class="challenge-context">
+                    <h4>Historical Context</h4>
+                    <p>Middle names were extremely rare in early America. Only 5 out of 33,000 Virginia colonists before 1660 had middle names. The practice became common around the Civil War (1860s). The earliest CJB likely dates to the early-to-mid 1800s.</p>
+                </div>
+                <p><strong>The Bradley surname arrived in America in 1634</strong> when Richard Bradley landed in Maryland—the same year St. Mary's City was founded. The family motto: <em>"Vigilance et Audax"</em> (Vigilant and Bold).</p>
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Research Resources</h4>
+                <div class="resources-list">
+                    <a href="https://www.familysearch.org" target="_blank" class="resource-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        FamilySearch.org (Free)
+                    </a>
+                    <a href="https://www.ancestry.com" target="_blank" class="resource-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        Ancestry.com
+                    </a>
+                    <a href="https://www.findagrave.com" target="_blank" class="resource-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8M8 12h8"/></svg>
+                        FindAGrave.com (Free)
+                    </a>
+                    <a href="https://www.wikitree.com/genealogy/BRADLEY" target="_blank" class="resource-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="3"/></svg>
+                        WikiTree Bradley Project
+                    </a>
+                </div>
+                <p style="margin-top: 2rem;"><strong>Found something?</strong> Submit your discoveries when you register. The CJB with the oldest documented ancestor wins recognition at the Summit!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission" id="mission">
+        <div class="container">
+            <span class="section-label">More Than a Name</span>
+            <h2 class="section-title">Why This Matters</h2>
+            <div class="mission-content">
+                <div class="mission-text">
+                    <p>This Summit isn't just a novelty—it's a living demonstration of <em>E Pluribus Unum</em>. Out of many, one. 2,287 people from different backgrounds, careers, and corners of America, united by three words on a birth certificate.</p>
+                    <p>We're launching this Summit on America's 250th birthday because the timing is too perfect to ignore. As our nation reflects on its founding principles, we'll explore what it means to share an identity in America today.</p>
+                    <p>This event is organized by Christopher J. Bradley—Gulf War veteran, attorney, and civic educator dedicated to teaching America's founding principles through platforms like The Citizen's Compass and Liberty's Principles Pals, a 28-book children's series on constitutional values.</p>
+                    <p>The Summit will support a veteran-focused charity, honoring our own Christopher Bradley—the Navy veteran from Crestview, Florida who recently received an adapted home after being severely injured in service.</p>
+                    <div class="platform-links">
+                        <a href="https://thecitizenscompass.com" target="_blank" class="platform-link">🧭 The Citizen's Compass</a>
+                        <a href="https://libertysprinciplespals.com" target="_blank" class="platform-link">📚 Liberty's Principles Pals</a>
+                        <a href="https://loveeveryone.love" target="_blank" class="platform-link">❤️ Love Everyone</a>
+                        <a href="https://theartofcitizenship.com" target="_blank" class="platform-link">🎨 The Art of Citizenship</a>
+                        <a href="https://familyunityhub.com" target="_blank" class="platform-link">👨‍👩‍👧‍👦 Family Unity Hub</a>
+                    </div>
+                </div>
+                <div class="mission-quote">
+                    <p>Love everyone. Start with you.</p>
+                    <cite>— The guiding philosophy behind this gathering</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <span class="section-label">Event Agenda</span>
+            <h2 class="section-title">Two Days of Connection</h2>
+            <div class="schedule-days">
+                <div class="schedule-day">
+                    <div class="schedule-day-header">
+                        <h3>Day One: Independence Day</h3>
+                        <div class="date">Saturday, July 4, 2026</div>
+                    </div>
+                    <div class="schedule-items">
+                        <div class="schedule-item">
+                            <div class="schedule-time">10:00 AM</div>
+                            <div class="schedule-event">
+                                <h4>Registration & Name Tag Ceremony</h4>
+                                <p>Receive your official numbered CJB badge</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">11:30 AM</div>
+                            <div class="schedule-event">
+                                <h4>Famous CJBs Wall Unveiling</h4>
+                                <p>Tribute to our notable namesakes</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">12:30 PM</div>
+                            <div class="schedule-event">
+                                <h4>Lunch & Introductions</h4>
+                                <p>Speed-meeting your namesakes</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">2:30 PM</div>
+                            <div class="schedule-event">
+                                <h4>America's 250th Civic Celebration</h4>
+                                <p>Reflection on founding principles</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">5:00 PM</div>
+                            <div class="schedule-event">
+                                <h4>The Great CJB Photo</h4>
+                                <p>Official group photo—let's set a record!</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">7:00 PM</div>
+                            <div class="schedule-event">
+                                <h4>Fireworks & Evening Reception</h4>
+                                <p>Celebrate Independence Day together</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule-day">
+                    <div class="schedule-day-header">
+                        <h3>Day Two: The Summit</h3>
+                        <div class="date">Sunday, July 5, 2026</div>
+                    </div>
+                    <div class="schedule-items">
+                        <div class="schedule-item">
+                            <div class="schedule-time">9:00 AM</div>
+                            <div class="schedule-event">
+                                <h4>Breakfast & Genealogy Reveals</h4>
+                                <p>Announcing the oldest documented CJB!</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">10:30 AM</div>
+                            <div class="schedule-event">
+                                <h4>Career Stories Panel</h4>
+                                <p>CJBs share their paths</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">12:00 PM</div>
+                            <div class="schedule-event">
+                                <h4>Veterans Honor Ceremony</h4>
+                                <p>Recognizing CJBs who served</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">1:30 PM</div>
+                            <div class="schedule-event">
+                                <h4>Charity Presentation</h4>
+                                <p>Announcing total raised for veterans</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">3:00 PM</div>
+                            <div class="schedule-event">
+                                <h4>Closing & "Until Next Time"</h4>
+                                <p>Planning for CJB Summit 2027</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registry Section -->
+    <section class="registry" id="register">
+        <div class="container">
+            <span class="section-label">Join the Registry</span>
+            <h2 class="section-title">Are You a Christopher J. Bradley?</h2>
+            <p class="registry-intro">Register to be counted, receive updates, and secure your spot. Middle name must start with "J" to register as a CJB. Supporters welcome too!</p>
+            <form class="registry-form" id="registryForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" value="Christopher" readonly style="opacity: 0.7;">
+                    </div>
+                    <div class="form-group">
+                        <label for="middleName">Middle Name (must start with J)</label>
+                        <input type="text" id="middleName" name="middleName" placeholder="James, John, Joseph...">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" value="Bradley" readonly style="opacity: 0.7;">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <select id="state" name="state">
+                            <option value="">Select your state...</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California (211 CJBs)</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="FL">Florida (195 CJBs)</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York (98 CJBs)</option>
+                            <option value="NC">North Carolina (137 CJBs)</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee (97 CJBs)</option>
+                            <option value="TX">Texas (154 CJBs)</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="INTL">Outside USA</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="profession">Profession</label>
+                        <input type="text" id="profession" name="profession" placeholder="What do you do?">
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <label for="bio">Brief Bio / Why You're Excited to Attend</label>
+                    <textarea id="bio" name="bio" placeholder="Tell us about yourself! What makes your Christopher J. Bradley story unique?"></textarea>
+                </div>
+                <div class="form-group full-width">
+                    <label for="genealogy">Genealogy Discovery (Optional)</label>
+                    <textarea id="genealogy" name="genealogy" placeholder="Found an early CJB in your family tree? Share your research here for the Genealogy Challenge!"></textarea>
+                </div>
+                <p class="form-note">By registering, you agree to receive email updates about the Summit. We'll never share your information. Registration is free; event tickets will be available in early 2026.</p>
+                <div class="form-submit">
+                    <button type="submit" class="btn btn-primary">Register as a CJB</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <span class="section-label">Questions</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Does my middle name have to be exactly "J"?</h4>
+                    <p>Your middle name needs to start with J—James, John, Joseph, Jeffrey, etc. all count! We're gathering Christopher J. Bradleys in the spirit of connection.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What if I'm not a Christopher J. Bradley?</h4>
+                    <p>Supporters are welcome! Just like Nigel Night had "Not Nigel" badges, we'll have a way to include friends and family.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Where exactly will this be held?</h4>
+                    <p>Northwest Florida—likely Destin/Fort Walton Beach/Pensacola area. Final venue announced in early 2026.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How much will tickets cost?</h4>
+                    <p>We're targeting $25-50 for registration to cover basic costs. The goal isn't profit—it's connection and charity.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What charity will benefit?</h4>
+                    <p>A veteran housing organization, honoring our own Christopher Bradley from Crestview, FL who was injured in service.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Will there be media coverage?</h4>
+                    <p>We're pursuing documentary and media partnerships. The Josh Fight was covered by CNN, BBC, ESPN, and WSJ.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can international CJBs attend?</h4>
+                    <p>Absolutely! We'd love to welcome any Christopher J. Bradleys from around the world.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Why July 4th, 2026?</h4>
+                    <p>It's America's 250th birthday—the semiquincentennial! Perfect timing to explore citizenship and identity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section class="sponsors" id="sponsors">
+        <div class="container">
+            <span class="section-label">Partner With Us</span>
+            <h2 class="section-title">Sponsorship Opportunities</h2>
+            <div class="sponsor-tiers">
+                <div class="sponsor-tier">
+                    <h3 class="tier-name">Bronze CJB</h3>
+                    <div class="tier-price">$500</div>
+                    <ul class="tier-benefits">
+                        <li>Logo on event website</li>
+                        <li>Social media recognition</li>
+                        <li>2 complimentary tickets</li>
+                        <li>Name in event program</li>
+                    </ul>
+                    <a href="mailto:sponsor@christopherjbradley.com?subject=Bronze Sponsorship" class="btn btn-secondary" style="width: 100%;">Inquire</a>
+                </div>
+                <div class="sponsor-tier featured">
+                    <h3 class="tier-name">Silver CJB</h3>
+                    <div class="tier-price">$2,500</div>
+                    <ul class="tier-benefits">
+                        <li>Everything in Bronze</li>
+                        <li>Logo on event signage</li>
+                        <li>Branded item in swag bags</li>
+                        <li>6 complimentary tickets</li>
+                        <li>Recognition in press releases</li>
+                        <li>Exhibit table at event</li>
+                    </ul>
+                    <a href="mailto:sponsor@christopherjbradley.com?subject=Silver Sponsorship" class="btn btn-primary" style="width: 100%;">Inquire</a>
+                </div>
+                <div class="sponsor-tier">
+                    <h3 class="tier-name">Gold CJB</h3>
+                    <div class="tier-price">$10,000</div>
+                    <ul class="tier-benefits">
+                        <li>Everything in Silver</li>
+                        <li>Presenting sponsor status</li>
+                        <li>Speaking opportunity</li>
+                        <li>Logo on all merchandise</li>
+                        <li>10 complimentary tickets</li>
+                        <li>Featured in documentary</li>
+                    </ul>
+                    <a href="mailto:sponsor@christopherjbradley.com?subject=Gold Sponsorship" class="btn btn-secondary" style="width: 100%;">Inquire</a>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 3rem; color: var(--color-text-light);">
+                <strong>Ideal sponsors:</strong> Genealogy services, name-related brands, tourism boards, veteran organizations, civic education platforms
+            </p>
+        </div>
+    </section>
+
+    <!-- Media Section -->
+    <section class="media" id="media">
+        <div class="container">
+            <span class="section-label">Press</span>
+            <h2 class="section-title">Media Inquiries</h2>
+            <div class="media-content">
+                <div class="media-text">
+                    <p>The Christopher J. Bradley Summit is a unique human interest story combining name-based gatherings, America's 250th anniversary, veteran recognition, and civic education.</p>
+                    <p><strong>Story angles:</strong><br>
+                    • The growing phenomenon of name-based gatherings<br>
+                    • America's 250th birthday celebration with a twist<br>
+                    • Finding connection through shared identity<br>
+                    • The genealogy crowdsourcing challenge<br>
+                    • Notable CJBs across careers</p>
+                    <p>We're open to documentary partnerships, feature stories, and broadcast coverage.</p>
+                </div>
+                <div class="media-contact">
+                    <h4>Contact</h4>
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                        <span>press@christopherjbradley.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Northwest Florida, USA</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        <span>July 4-5, 2026</span>
+                    </div>
+                    <a href="#" class="press-kit-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        Download Press Kit (Coming Soon)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Christopher J. Bradley Summit</h3>
+                <p>The first-ever gathering of people who share the name Christopher J. Bradley. Celebrating America's 250th anniversary on July 4-5, 2026 in Northwest Florida.</p>
+                <p style="margin-top: 1rem; font-style: italic; color: var(--color-gold);">"E Pluribus Unum — Out of Many, One Name"</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#notable">Notable CJBs</a></li>
+                    <li><a href="#challenge">Genealogy Challenge</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li><a href="#sponsors">Sponsors</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Related Projects</h4>
+                <ul>
+                    <li><a href="https://christopherjbradley.com" target="_blank">ChristopherJBradley.com</a></li>
+                    <li><a href="https://thecitizenscompass.com" target="_blank">The Citizen's Compass</a></li>
+                    <li><a href="https://libertysprinciplespals.com" target="_blank">Liberty's Principles Pals</a></li>
+                    <li><a href="https://theartofcitizenship.com" target="_blank">The Art of Citizenship</a></li>
+                    <li><a href="https://loveeveryone.love" target="_blank">Love Everyone</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Christopher J. Bradley. All rights reserved.</p>
+            <p>Built with ❤️ by a CJB, for all CJBs</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation visibility on scroll
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                nav.classList.add('visible');
+            } else {
+                nav.classList.remove('visible');
+            }
+        });
+
+        // Generate stars
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 50; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            star.style.transform = `scale(${0.5 + Math.random() * 1})`;
+            starsContainer.appendChild(star);
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Form submission with Firebase
+        document.getElementById('registryForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const middleName = document.getElementById('middleName').value.trim();
+            if (middleName && !middleName.toLowerCase().startsWith('j')) {
+                alert('Your middle name must start with "J" to register as a Christopher J. Bradley!');
+                return;
+            }
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                middleName: middleName,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                state: document.getElementById('state').value,
+                profession: document.getElementById('profession').value,
+                bio: document.getElementById('bio').value,
+                genealogy: document.getElementById('genealogy').value
+            };
+
+            const success = await window.submitRegistration(formData);
+
+            if (success) {
+                alert('Thank you for registering! We\'ll be in touch with updates about the Christopher J. Bradley Summit.');
+                this.reset();
+                document.getElementById('firstName').value = 'Christopher';
+                document.getElementById('lastName').value = 'Bradley';
+            } else {
+                alert('There was an error submitting your registration. Please try again.');
+            }
+
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        });
+
+        // Fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+        document.querySelector('.hero').style.opacity = '1';
+        document.querySelector('.hero').style.transform = 'none';
+
+        // Social Share Functionality
+        const BASE_URL = 'https://christopherjbradley.com/convention/';
+        const PAGE_TITLE = 'The First Annual Christopher J. Bradley Summit';
+
+        const sectionTitles = {
+            'home': 'Join Us July 4-5, 2026',
+            'story': 'Our Story',
+            'notable': 'Notable CJBs',
+            'challenge': 'Genealogy Challenge',
+            'mission': 'Why This Matters',
+            'schedule': 'Event Schedule',
+            'register': 'Register Now',
+            'faq': 'FAQ',
+            'sponsors': 'Sponsorship'
+        };
+
+        const icons = {
+            twitter: '<svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>',
+            facebook: '<svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>',
+            linkedin: '<svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>',
+            copy: '<svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>'
+        };
+
+        function createShareButtons(sectionId) {
+            return `
+                <div class="share-section">
+                    <span class="share-label">Share:</span>
+                    <div class="share-buttons">
+                        <button class="share-btn twitter" onclick="shareTwitter('${sectionId}')" title="Share on X (Twitter)">${icons.twitter}</button>
+                        <button class="share-btn facebook" onclick="shareFacebook('${sectionId}')" title="Share on Facebook">${icons.facebook}</button>
+                        <button class="share-btn linkedin" onclick="shareLinkedIn('${sectionId}')" title="Share on LinkedIn">${icons.linkedin}</button>
+                        <button class="share-btn copy" onclick="copyLink('${sectionId}')" title="Copy link">${icons.copy}</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function shareTwitter(sectionId) {
+            const sectionTitle = sectionTitles[sectionId] || 'CJB Summit';
+            const url = sectionId === 'home' ? BASE_URL : BASE_URL + '#' + sectionId;
+            const text = `${PAGE_TITLE} - ${sectionTitle} #CJBSummit #America250`;
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'width=550,height=420');
+        }
+
+        function shareFacebook(sectionId) {
+            const url = sectionId === 'home' ? BASE_URL : BASE_URL + '#' + sectionId;
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank', 'width=550,height=420');
+        }
+
+        function shareLinkedIn(sectionId) {
+            const url = sectionId === 'home' ? BASE_URL : BASE_URL + '#' + sectionId;
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'width=550,height=420');
+        }
+
+        function copyLink(sectionId) {
+            const url = sectionId === 'home' ? BASE_URL : BASE_URL + '#' + sectionId;
+            navigator.clipboard.writeText(url).then(function() {
+                const toast = document.getElementById('copyToast');
+                toast.classList.add('visible');
+                setTimeout(function() {
+                    toast.classList.remove('visible');
+                }, 2000);
+            });
+        }
+
+        // Add share buttons to sections
+        document.addEventListener('DOMContentLoaded', function() {
+            const sectionsToShare = ['story', 'notable', 'challenge', 'mission', 'schedule', 'faq', 'sponsors'];
+            sectionsToShare.forEach(function(sectionId) {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const container = section.querySelector('.container');
+                    if (container) {
+                        container.insertAdjacentHTML('beforeend', createShareButtons(sectionId));
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Copy Toast -->
+    <div id="copyToast" class="copy-toast">Link copied to clipboard!</div>
+</body>
+</html>
