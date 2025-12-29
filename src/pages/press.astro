@@ -1,0 +1,217 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const pressImages = [
+  {
+    src: '/assets/press/headshot.jpg',
+    alt: 'Christopher J. Bradley headshot',
+    caption: 'Christopher J. Bradley, founder'
+  },
+  {
+    src: '/assets/press/sunset-1.jpg',
+    alt: 'Sunset photograph from sailboat',
+    caption: 'From the 2,000+ sunsets photographed during a decade on a sailboat'
+  },
+  {
+    src: '/assets/press/sunset-2.jpg',
+    alt: 'Sunset photograph from sailboat',
+    caption: 'From the 2,000+ sunsets photographed during a decade on a sailboat'
+  },
+  {
+    src: '/assets/press/logo.png',
+    alt: 'CJB Summit logo',
+    caption: 'CJB Summit logo'
+  }
+];
+
+const storyAngles = [
+  'The growing phenomenon of name-based gatherings (Josh Fight, Phil Campbell, Nigel Night)',
+  "America's 250th birthday — E Pluribus Unum with a twist",
+  "A veteran's journey from disconnection to building community",
+  'The genealogy crowdsourcing challenge to find the earliest American CJB',
+  'Honoring a Navy veteran namesake injured in service'
+];
+
+const quickFacts = [
+  { label: 'Estimated Christopher J. Bradleys in America', value: '2,287' },
+  { label: 'Event Date', value: 'July 4-5, 2026' },
+  { label: 'Location', value: 'Northwest Florida' },
+  { label: 'World record to beat', value: '2,325 (Ivans in Bosnia, 2017)' },
+  { label: 'Proceeds benefit', value: 'Veteran housing organizations' }
+];
+---
+
+<Layout
+  title="Press & Media | Christopher J. Bradley Summit"
+  description="Press resources for the Christopher J. Bradley Summit - a unique human interest story combining name-based gatherings, America's 250th anniversary, and veteran recognition."
+>
+  <Navigation />
+
+  <main id="main-content" class="min-h-screen bg-white dark:bg-slate-950">
+    <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <header class="mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-liberty-navy dark:text-slate-100 mb-6">
+          Press & Media
+        </h1>
+        <p class="text-xl text-liberty-navy/80 dark:text-slate-300 leading-relaxed">
+          The Christopher J. Bradley Summit is a unique human interest story combining name-based
+          gatherings, America's 250th anniversary, veteran recognition, and a founder with an unusual journey.
+        </p>
+      </header>
+
+      <!-- The Story -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-liberty-navy dark:text-slate-100 mb-4">
+          The Story
+        </h2>
+        <div class="space-y-4 text-liberty-navy/80 dark:text-slate-300 leading-relaxed">
+          <p>
+            On July 4, 2026 — America's 250th birthday — up to 2,000 strangers who share the exact same
+            name will gather in Northwest Florida for the first time. The Christopher J. Bradley Summit
+            brings together the estimated 2,287 Americans who share this name to explore what connects
+            them beyond three words on a birth certificate.
+          </p>
+          <p>
+            The organizer, Christopher J. Bradley, is a Gulf War veteran who spent nearly a decade
+            living alone on a sailboat along Florida's Gulf Coast after his life fell apart. During
+            those years, he photographed over 2,000 sunsets, wrote several children's books in addition
+            to the 28 children's book series he is finishing on constitutional values to be released on
+            July 4, 2026, and built several civic education platforms. The summit is his experiment in connection.
+          </p>
+        </div>
+      </section>
+
+      <!-- Story Angles -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-liberty-navy dark:text-slate-100 mb-4">
+          Story Angles
+        </h2>
+        <ul class="space-y-3">
+          {storyAngles.map((angle) => (
+            <li class="flex items-start gap-3 text-liberty-navy/80 dark:text-slate-300">
+              <span class="text-liberty-gold font-bold mt-1">•</span>
+              <span>{angle}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <!-- Quick Facts -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-liberty-navy dark:text-slate-100 mb-4">
+          Quick Facts
+        </h2>
+        <div class="bg-liberty-cream dark:bg-slate-800 rounded-lg p-6 border-l-4 border-liberty-gold">
+          <dl class="space-y-4">
+            {quickFacts.map((fact) => (
+              <div class="flex flex-col sm:flex-row sm:gap-2">
+                <dt class="font-semibold text-liberty-navy dark:text-slate-100">{fact.label}:</dt>
+                <dd class="text-liberty-navy/80 dark:text-slate-300">{fact.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      <!-- Photos for Media Use -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-liberty-navy dark:text-slate-100 mb-4">
+          Photos for Media Use
+        </h2>
+        <p class="text-liberty-navy/70 dark:text-slate-400 mb-6">
+          Click any image to download the full resolution version.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {pressImages.map((image) => (
+            <a
+              href={image.src}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group block bg-gray-100 dark:bg-slate-800 rounded-lg overflow-hidden border-2 border-transparent hover:border-liberty-gold transition-all duration-300"
+            >
+              <div class="aspect-video bg-gray-200 dark:bg-slate-700 flex items-center justify-center">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  class="w-full h-full object-cover"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="hidden w-full h-full items-center justify-center text-liberty-navy/40 dark:text-slate-500">
+                  <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="p-4">
+                <p class="text-sm text-liberty-navy/70 dark:text-slate-400 group-hover:text-liberty-gold transition-colors">
+                  {image.caption}
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <!-- Download Press Kit -->
+      <section class="mb-12">
+        <div class="bg-gradient-to-r from-liberty-navy to-liberty-burgundy rounded-lg p-8 text-center">
+          <h2 class="text-2xl font-bold text-white mb-4">
+            Download Press Kit
+          </h2>
+          <p class="text-white/80 mb-6">
+            Get all press materials in one convenient download.
+          </p>
+          <a
+            href="/assets/press/presskit.pdf"
+            download="CJB_Summit_Press_Kit.pdf"
+            class="inline-flex items-center gap-2 px-8 py-4 bg-liberty-gold text-liberty-navy font-semibold rounded-md hover:bg-yellow-400 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 min-h-[44px]"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Download Press Kit (PDF)
+          </a>
+        </div>
+      </section>
+
+      <!-- Media Contact -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-liberty-navy dark:text-slate-100 mb-4">
+          Media Contact
+        </h2>
+        <div class="bg-liberty-cream dark:bg-slate-800 rounded-lg p-6 border-2 border-liberty-navy/10 dark:border-slate-700">
+          <p class="text-liberty-navy/80 dark:text-slate-300 mb-4">
+            For press inquiries, interview requests, or additional information:
+          </p>
+          <a
+            href="mailto:press@christopherjbradley.com"
+            class="inline-flex items-center gap-2 text-lg font-semibold text-liberty-navy dark:text-liberty-gold hover:text-liberty-gold dark:hover:text-yellow-400 transition-colors"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            press@christopherjbradley.com
+          </a>
+        </div>
+      </section>
+
+      <!-- Back to Summit -->
+      <div class="text-center pt-8 border-t border-liberty-navy/10 dark:border-slate-700">
+        <a
+          href="/cjbsummit/"
+          class="inline-flex items-center gap-2 text-liberty-navy dark:text-slate-300 hover:text-liberty-gold dark:hover:text-liberty-gold transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to CJB Summit
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

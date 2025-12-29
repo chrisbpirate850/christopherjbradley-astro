@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CJB Summit Press Kit</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    @page {
+      size: letter;
+      margin: 0.75in;
+    }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 11pt;
+      line-height: 1.6;
+      color: #1f2937;
+      background: white;
+    }
+
+    /* Colors */
+    :root {
+      --navy: #1a365d;
+      --gold: #f59e0b;
+      --burgundy: #991b1b;
+      --gray-dark: #374151;
+      --gray-light: #9ca3af;
+    }
+
+    /* Page breaks */
+    .page {
+      page-break-after: always;
+      min-height: 100vh;
+      padding: 0;
+    }
+    .page:last-child {
+      page-break-after: avoid;
+    }
+
+    /* Typography */
+    h1 {
+      font-size: 28pt;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 18pt;
+      color: var(--navy);
+      margin-bottom: 1rem;
+      margin-top: 1.5rem;
+      font-weight: bold;
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 12pt;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    /* Cover page */
+    .cover {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+    }
+    .cover h1 {
+      font-size: 36pt;
+      margin-bottom: 0.25rem;
+    }
+    .cover .subtitle {
+      font-size: 24pt;
+      color: var(--gray-dark);
+      margin-bottom: 2rem;
+    }
+    .cover .tagline {
+      font-size: 14pt;
+      font-style: italic;
+      color: var(--burgundy);
+      margin-bottom: 3rem;
+    }
+    .cover .details {
+      font-size: 12pt;
+      color: var(--gray-dark);
+      line-height: 2;
+    }
+    .cover .logo {
+      max-width: 200px;
+      max-height: 200px;
+      margin-bottom: 2rem;
+    }
+
+    /* Fact boxes */
+    .fact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .fact-box {
+      background: #f8fafc;
+      border-left: 4px solid var(--gold);
+      padding: 0.75rem 1rem;
+    }
+    .fact-box .label {
+      font-size: 9pt;
+      color: var(--gray-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .fact-box .value {
+      font-size: 12pt;
+      color: var(--navy);
+      font-weight: bold;
+    }
+
+    /* Lists */
+    ul {
+      margin: 1rem 0 1rem 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Quotes */
+    .quote {
+      background: #f8fafc;
+      border-left: 4px solid var(--navy);
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+    }
+    .quote-attribution {
+      text-align: right;
+      font-style: normal;
+      color: var(--gray-dark);
+      margin-top: 0.5rem;
+    }
+
+    /* Stats grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .stat {
+      text-align: center;
+      padding: 1rem;
+      background: #f8fafc;
+      border-radius: 4px;
+    }
+    .stat .number {
+      font-size: 24pt;
+      font-weight: bold;
+      color: var(--navy);
+    }
+    .stat .desc {
+      font-size: 9pt;
+      color: var(--gray-dark);
+    }
+
+    /* Contact section */
+    .contact-box {
+      background: var(--navy);
+      color: white;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .contact-box h3 {
+      color: var(--gold);
+    }
+    .contact-box p {
+      color: white;
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+
+    /* Story angle boxes */
+    .angle-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .angle {
+      padding: 1rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 4px;
+    }
+    .angle h4 {
+      font-size: 10pt;
+      color: var(--burgundy);
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    .angle p {
+      font-size: 10pt;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    /* Bio section */
+    .bio-short {
+      background: #fef3c7;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    .bio-short h3 {
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Footer on each page */
+    .page-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 9pt;
+      color: var(--gray-light);
+      padding-top: 1rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    /* Print specific */
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .page {
+        height: 100vh;
+        overflow: hidden;
+      }
+    }
+
+    /* Screen helper */
+    .print-instructions {
+      background: #fef3c7;
+      border: 2px solid var(--gold);
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+    }
+    @media print {
+      .print-instructions {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="print-instructions">
+    <strong>To save as PDF:</strong> Press Ctrl+P (or Cmd+P on Mac), then select "Save as PDF" as your destination. Use "Letter" paper size with default margins.
+  </div>
+
+  <!-- PAGE 1: COVER -->
+  <div class="page cover">
+    <img src="press/logo.png" alt="CJB Summit Logo" class="logo">
+    <h1>Christopher J. Bradley Summit</h1>
+    <div class="subtitle">Press Kit</div>
+    <div class="tagline">E Pluribus Unum — Out of Many, One Name</div>
+    <div class="details">
+      <p>July 4-5, 2026 • Northwest Florida</p>
+      <p>christopherjbradley.com</p>
+      <p>press@christopherjbradley.com</p>
+    </div>
+  </div>
+
+  <!-- PAGE 2: EVENT OVERVIEW -->
+  <div class="page">
+    <h1>The Christopher J. Bradley Summit</h1>
+    <p style="font-style: italic; font-size: 14pt; color: #991b1b; margin-bottom: 1.5rem;">
+      E Pluribus Unum — Out of Many, One Name
+    </p>
+
+    <div class="fact-grid">
+      <div class="fact-box">
+        <div class="label">What</div>
+        <div class="value">The first-ever gathering of everyone in America named Christopher J. Bradley</div>
+      </div>
+      <div class="fact-box">
+        <div class="label">When</div>
+        <div class="value">July 4-5, 2026 (America's 250th birthday)</div>
+      </div>
+      <div class="fact-box">
+        <div class="label">Where</div>
+        <div class="value">Northwest Florida (specific venue TBA)</div>
+      </div>
+      <div class="fact-box">
+        <div class="label">Goal</div>
+        <div class="value">Bring together as many of the estimated 2,287 American CJBs as possible</div>
+      </div>
+    </div>
+
+    <div class="fact-grid">
+      <div class="fact-box">
+        <div class="label">World Record</div>
+        <div class="value">2,325 (Ivans in Bosnia, 2017)</div>
+      </div>
+      <div class="fact-box">
+        <div class="label">Charity</div>
+        <div class="value">Proceeds benefit veteran housing organizations</div>
+      </div>
+    </div>
+
+    <div class="quote">
+      "I've spent years thinking about what connects us and what divides us. This is the most literal version of that question I could imagine."
+    </div>
+
+    <h2>Precedent</h2>
+    <ul>
+      <li><strong>Josh Fight (2021):</strong> ~1,000 attendees, $14,000 raised, CNN/BBC/ESPN/WSJ coverage</li>
+      <li><strong>Phil Campbell Convention (1995, 2011):</strong> Documentary "I'm With Phil"</li>
+      <li><strong>Nigel Night (2019):</strong> 434 Nigels gathered in England</li>
+    </ul>
+
+    <div class="contact-box">
+      <h3>REGISTRATION</h3>
+      <p>christopherjbradley.com (free)</p>
+      <h3 style="margin-top: 1rem;">MEDIA CONTACT</h3>
+      <p>press@christopherjbradley.com</p>
+    </div>
+  </div>
+
+  <!-- PAGE 3: FOUNDER BIO -->
+  <div class="page">
+    <h1>Founder Bio</h1>
+
+    <div class="bio-short">
+      <h3>Short Bio (100 words)</h3>
+      <p>
+        Christopher J. Bradley is a Gulf War veteran, lawyer, and civic educator based in Northwest Florida. After years of personal upheaval — including a painful estrangement from his daughter — he spent nearly a decade living on a sailboat, where he photographed over 2,000 sunsets and developed his guiding philosophy: "Love everyone, start with you." He's the author of a 28-book children's series on constitutional values and founder of several civic education platforms. The CJB Summit is his attempt to explore what connects people — starting with the 2,287 Americans who share his exact name.
+      </p>
+    </div>
+
+    <h2>Long Bio (350 words)</h2>
+
+    <p>Christopher J. Bradley knows something about disconnection.</p>
+
+    <p>
+      A Gulf War veteran who served with the 1st Cavalry Division driving a tank in combat at 19, Bradley returned home to build a life — law school, a legal career, a family. Then it fell apart. A difficult divorce led to estrangement from his daughter, a separation that persists to this day. The systems meant to protect families failed him, a story he documented in his memoir "The Citizen's Compass: A Journey Through American Principles and Personal Reckoning."
+    </p>
+
+    <p>
+      In the aftermath, Bradley did something unexpected: he moved onto a 36-foot sailboat docked along Florida's Northwest Gulf Coast. For nearly a decade, he lived on the water, often anchored less than a mile from where his daughter attended high school — close enough to hope, too far to reach.
+    </p>
+
+    <p>
+      During those years, he photographed over 2,000 sunsets from the same vantage point. The practice became a meditation on impermanence, beauty, and the stubborn persistence of showing up. He emerged with a simple philosophy: "Life is simple. Love everyone, start with you."
+    </p>
+
+    <p>
+      That philosophy now drives his work. Bradley is the author of "Liberty's Principles Pals," a 28-book children's series teaching constitutional values to young readers. He's built nine interconnected platforms focused on civic education, family strengthening, and intentional living — including The Citizen's Compass, The Art of Citizenship, and Love Everyone.love.
+    </p>
+
+    <p>
+      The Christopher J. Bradley Summit represents something new: an experiment in connection.
+    </p>
+
+    <p>
+      There are approximately 2,287 people in America who share his exact name — mathematicians, doctors, veterans, actors, teachers. They've never met. On July 4, 2026 — America's 250th birthday — Bradley is trying to bring as many of them together as possible.
+    </p>
+
+    <div class="quote">
+      "I've spent years thinking about what connects us and what divides us. This is the most literal version of that question I could imagine. Two thousand strangers who share nothing but a name, coming together to see what else we have in common."
+    </div>
+
+    <p>
+      The summit will be held in Northwest Florida and will benefit a veteran housing charity, honoring another Christopher Bradley — a Navy veteran from Crestview who was injured in service.
+    </p>
+  </div>
+
+  <!-- PAGE 4: QUOTABLE QUOTES -->
+  <div class="page">
+    <h1>Quotable Quotes</h1>
+    <p style="color: #6b7280; margin-bottom: 2rem;">Pre-approved quotes from Christopher J. Bradley for media use:</p>
+
+    <div class="quote">
+      "I've spent years thinking about what connects us and what divides us. This is the most literal version of that question I could imagine — 2,000 strangers who share nothing but a name, coming together to see what else we have in common."
+    </div>
+
+    <div class="quote">
+      "I lived on a sailboat for nearly a decade. I photographed over 2,000 sunsets. I wrote 28 children's books. Now I'm gathering everyone in America who shares my name. My life doesn't follow a straight line — but it all connects."
+    </div>
+
+    <div class="quote">
+      "E Pluribus Unum — out of many, one. Usually that refers to states. For us, it's about people. What unites 2,287 strangers beyond three words on a birth certificate? That's what we're going to find out."
+    </div>
+
+    <div class="quote">
+      "The sailboat years taught me something: you can't control the wind, but you can adjust your sails. This summit is me adjusting my sails — building something about connection after years of learning what disconnection feels like."
+    </div>
+
+    <div class="quote">
+      "One of our namesakes is a Navy veteran from Florida who was severely injured in service. When we gather, we're not just celebrating a name — we're honoring the stories behind it."
+    </div>
+
+    <div class="quote">
+      "Love everyone, start with you. That's the philosophy I developed on the boat. This summit is one way I'm trying to live it out."
+    </div>
+  </div>
+
+  <!-- PAGE 5: STORY ANGLES & KEY STATISTICS -->
+  <div class="page">
+    <h1>Story Angles & Key Statistics</h1>
+
+    <h2>Story Angles for Journalists</h2>
+
+    <div class="angle-grid">
+      <div class="angle">
+        <h4>Human Interest / Feature</h4>
+        <p>A man who experienced profound disconnection — from his daughter, from his expected life — builds something fundamentally about connection. The irony is the point.</p>
+      </div>
+      <div class="angle">
+        <h4>Trend Piece</h4>
+        <p>The growing phenomenon of name-based gatherings. Josh Fight, Phil Campbell, Nigel Night — and now this.</p>
+      </div>
+      <div class="angle">
+        <h4>America 250 Angle</h4>
+        <p>E Pluribus Unum with a twist. What unites Americans beyond the obvious?</p>
+      </div>
+      <div class="angle">
+        <h4>Veteran Story</h4>
+        <p>Gulf War veteran rebuilds his life through civic education and community building. Summit honors injured Navy veteran namesake.</p>
+      </div>
+      <div class="angle">
+        <h4>Lifestyle / Second Act</h4>
+        <p>A decade on a sailboat, 2,000 sunsets, and finding purpose after loss.</p>
+      </div>
+      <div class="angle">
+        <h4>Genealogy Angle</h4>
+        <p>Crowdsourcing the search for the first Christopher J. Bradley in American history.</p>
+      </div>
+      <div class="angle">
+        <h4>Local Florida Angle</h4>
+        <p>Northwest Florida resident's unusual journey — from sailboat to civic educator to gathering organizer.</p>
+      </div>
+    </div>
+
+    <h2>Key Statistics</h2>
+
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="number">2,287</div>
+        <div class="desc">Estimated CJBs in America</div>
+      </div>
+      <div class="stat">
+        <div class="number">50</div>
+        <div class="desc">States represented</div>
+      </div>
+      <div class="stat">
+        <div class="number">250</div>
+        <div class="desc">Years of independence</div>
+      </div>
+      <div class="stat">
+        <div class="number">2,325</div>
+        <div class="desc">Current world record</div>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="number">1,400+</div>
+        <div class="desc">CJB profiles on LinkedIn</div>
+      </div>
+      <div class="stat">
+        <div class="number">1634</div>
+        <div class="desc">First Bradley in America</div>
+      </div>
+      <div class="stat">
+        <div class="number">28</div>
+        <div class="desc">Children's books written</div>
+      </div>
+      <div class="stat">
+        <div class="number">2,000+</div>
+        <div class="desc">Sunsets photographed</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 6: CONTACT & RESOURCES -->
+  <div class="page">
+    <h1>Contact & Resources</h1>
+
+    <div class="contact-box">
+      <h3>Media Contact</h3>
+      <p><strong>Christopher J. Bradley</strong></p>
+      <p>press@christopherjbradley.com</p>
+      <p>Northwest Florida, USA</p>
+    </div>
+
+    <h2>Website</h2>
+    <p style="font-size: 14pt;"><strong>christopherjbradley.com</strong></p>
+
+    <h2>High-Resolution Photos</h2>
+    <p>Available upon request. Includes headshots, sunset photography from the sailboat years, and event graphics.</p>
+
+    <h2>Interviews</h2>
+    <p>Christopher J. Bradley is available for phone, video, and in-person interviews. He can also connect journalists with other registered Christopher J. Bradleys for additional perspectives.</p>
+
+    <h2>Related Projects</h2>
+    <ul>
+      <li><strong>The Citizen's Compass</strong> — thecitizenscompass.com</li>
+      <li><strong>Liberty's Principles Pals</strong> — libertysprinciplespals.com</li>
+      <li><strong>Love Everyone</strong> — loveeveryone.love</li>
+      <li><strong>Sunsets for the Soul</strong> — sunsetsforthesoul.com</li>
+    </ul>
+
+    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #1a365d; text-align: center;">
+      <p style="font-size: 14pt; font-style: italic; color: #991b1b;">
+        E Pluribus Unum — Out of Many, One Name
+      </p>
+      <p style="font-size: 12pt; color: #6b7280; margin-top: 1rem;">
+        July 4-5, 2026 • Northwest Florida<br>
+        christopherjbradley.com
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

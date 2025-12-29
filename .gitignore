@@ -12,7 +12,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-
 # environment variables
 .env
 .env.production
@@ -20,5 +19,27 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# jetbrains setting folder
+# Windows-specific files
+desktop.ini
+Thumbs.db
+
+# JetBrains setting folder
 .idea/
+
+# Claude Code
+.claude/
+
+# Firebase cache (keep config files, ignore cache)
+.firebase/
+
+# Temporary/working files
+*.zip
+cjbconventionfiles/
+files/
+
+# Backup files
+*.bak
+*.backup
+
+# Project notes
+NEXT_STEPS.md
